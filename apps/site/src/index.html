@@ -5,7 +5,30 @@
     <title>Karmanto</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F3ECE0" />
+    <meta name="color-scheme" content="light dark" />
+    <!-- The theme before the first paint, without Angular: the same key, classes and colors as `ThemeService` in
+         `@karmanto/ui/theme-menu`. No theme or no storage — the system one. -->
+    <script>
+      (function () {
+        var mode;
+        try {
+          mode = localStorage.getItem('karmanto.theme');
+        } catch (e) {}
+        if (mode !== 'light' && mode !== 'dark') {
+          mode = 'system';
+        } else {
+          document.documentElement.className += ' theme-' + mode;
+          document.querySelector('meta[name="color-scheme"]').setAttribute('content', mode);
+        }
+        var dark = mode === 'dark' || (mode === 'system' && !!(window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches));
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#1B1814' : '#F3ECE0');
+      })();
+    </script>
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
     <km-root></km-root>
