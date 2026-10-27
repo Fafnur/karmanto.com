@@ -31,7 +31,8 @@
       "@karmanto/ui/language-menu": ["./libs/ui/language-menu/src/index.ts"],
       "@karmanto/ui/language-hint": ["./libs/ui/language-hint/src/index.ts"],
       "@karmanto/ui/header": ["./libs/ui/header/src/index.ts"],
-      "@karmanto/ui/footer": ["./libs/ui/footer/src/index.ts"]
+      "@karmanto/ui/footer": ["./libs/ui/footer/src/index.ts"],
+      "@karmanto/legal/content": ["./libs/legal/content/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
