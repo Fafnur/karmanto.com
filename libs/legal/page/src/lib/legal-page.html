@@ -1,2 +1,40 @@
-<h1>{{ title }}</h1>
-<p i18n="Stub page|Placeholder text until the page is ready">This page is coming soon.</p>
+<header class="mb-10 space-y-3">
+  <h1>{{ $document().title }}</h1>
+  <p class="text-sm text-ink-muted">
+    <ng-container i18n="Legal page|Date of the last revision of the document">Updated:</ng-container>
+    <time class="ml-1" [attr.datetime]="$document().updated">{{ $document().updated | date: 'longDate' }}</time>
+  </p>
+  @if ($document().fallback) {
+    <p class="text-sm text-ink-secondary" i18n="Legal page|Note when the document has no translation and is shown in English">
+      This document is available in English only.
+    </p>
+  }
+</header>
+
+<div class="lg:grid lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-12">
+  <nav class="mb-10 lg:order-last lg:mb-0" aria-label="Contents" i18n-aria-label="Legal page|Accessible label of the table of contents">
+    <!-- Handset and tablet: collapsed, so the text starts on the first screen. -->
+    <details class="rounded-card border border-outline bg-paper p-4 lg:hidden">
+      <summary class="cursor-pointer font-semibold text-ink" i18n="Legal page|Heading of the table of contents">Contents</summary>
+      <ng-container *ngTemplateOutlet="toc" />
+    </details>
+    <!-- Web: always visible next to the text. -->
+    <div class="hidden lg:sticky lg:top-24 lg:block">
+      <p class="font-semibold text-ink" i18n="Legal page|Heading of the table of contents">Contents</p>
+      <ng-container *ngTemplateOutlet="toc" />
+    </div>
+  </nav>
+
+  <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
+  <div class="prose min-w-0 max-w-none" [innerHTML]="$html()" (click)="onContentClick($event)"></div>
+</div>
+
+<ng-template #toc>
+  <ol class="mt-3 space-y-2 text-sm">
+    @for (item of $document().toc; track item.id) {
+      <li>
+        <a class="text-ink-secondary hover:text-ink" routerLink="." [fragment]="item.id">{{ item.title }}</a>
+      </li>
+    }
+  </ol>
+</ng-template>

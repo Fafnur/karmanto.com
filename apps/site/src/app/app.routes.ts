@@ -1,6 +1,7 @@
 import { Route } from '@angular/router';
 
 import { PATHS, SeoRouteData, toRoutes } from '@karmanto/core';
+import { legalDocument, legalTitle } from '@karmanto/legal/content';
 
 const notFound: SeoRouteData = { noindex: true };
 
@@ -16,7 +17,8 @@ export const appRoutes: Route[] = toRoutes([
   {
     path: PATHS.privacy,
     loadComponent: () => import('@karmanto/legal/page'),
-    title: $localize`:Privacy page|Page title in the browser tab:Privacy Policy`,
+    title: legalTitle('privacy'),
+    resolve: { document: legalDocument('privacy') },
     data: {
       description: $localize`:Privacy page|Meta description:How the Karmanto app and website collect, use and protect personal data.`,
     } satisfies SeoRouteData,
@@ -24,7 +26,8 @@ export const appRoutes: Route[] = toRoutes([
   {
     path: PATHS.terms,
     loadComponent: () => import('@karmanto/legal/page'),
-    title: $localize`:Terms page|Page title in the browser tab:Terms of Use`,
+    title: legalTitle('terms'),
+    resolve: { document: legalDocument('terms') },
     data: {
       description: $localize`:Terms page|Meta description:Terms of use of the Karmanto app and website.`,
     } satisfies SeoRouteData,
@@ -32,7 +35,8 @@ export const appRoutes: Route[] = toRoutes([
   {
     path: PATHS.consent,
     loadComponent: () => import('@karmanto/legal/page'),
-    title: $localize`:Consent page|Page title in the browser tab:Consent to Personal Data Processing`,
+    title: legalTitle('consent'),
+    resolve: { document: legalDocument('consent') },
     data: {
       description: $localize`:Consent page|Meta description:Consent to the processing of personal data sent through the Karmanto contact form.`,
     } satisfies SeoRouteData,

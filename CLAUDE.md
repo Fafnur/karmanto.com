@@ -28,6 +28,10 @@
   копируются в `/fonts/` (`assets`), `@font-face` с `unicode-range` — в `styles.scss`: `latin`, `latin-ext`,
   `cyrillic`, `greek`, `vietnamese`. Preload шрифта локали — `provideFontPreload()` в серверном конфиге.
 - Бренд — иконка приложения как есть (`favicon.svg`, она же в шапке) + вордмарк текстом; правила — `brandbook/README.md`.
+- Юридические документы — `content/{en,ru,es}/{privacy,terms,consent}.md` → таргет `legal/content:content`
+  (`tools/scripts/content.mjs`) → `libs/legal/content/src/generated/` (в `.gitignore`, собирается перед `site`).
+  Якоря `##` — по английскому заголовку, число `##` во всех языках одинаковое; строка `TODO:` ломает сборку.
+  Вывод — `prose` (`@tailwindcss/typography`, `target: 'legacy'`, тема под палитру в конфиге).
 - Адаптивность — три разрешения на брейкпоинтах Tailwind, mobile-first: handset (< 768 px, без префикса),
   tablet (`md:`, 768–1023 px), web (`lg:`, ≥ 1024 px). e2e гоняются на всех трёх (Pixel 7, 820×1180, Desktop).
 - Старые браузеры: синтаксис понижает сборка, недостающие API — точечные модули `core-js/stable/*` в

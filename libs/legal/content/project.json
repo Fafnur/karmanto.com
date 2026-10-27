@@ -1,0 +1,22 @@
+{
+  "name": "legal/content",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/legal/content/src",
+  "prefix": "km",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "content": {
+      "command": "node tools/scripts/content.mjs",
+      "cache": true,
+      "inputs": ["{workspaceRoot}/content/**/*", "{workspaceRoot}/tools/scripts/content.mjs"],
+      "outputs": ["{projectRoot}/src/generated"]
+    },
+    "test": {
+      "dependsOn": ["content"]
+    },
+    "lint": {
+      "dependsOn": ["content"]
+    }
+  }
+}
