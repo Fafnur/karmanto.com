@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+<title>Pocket with flashcards and a leaf</title>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e9d7bb"/><stop offset="1" stop-color="#e3cfaf"/></linearGradient>
+ <linearGradient id="leather" x1="240" y1="350" x2="785" y2="840" gradientUnits="userSpaceOnUse"><stop stop-color="#c99051"/><stop offset=".48" stop-color="#bd7d40"/><stop offset="1" stop-color="#aa672f"/></linearGradient>
+ <linearGradient id="inside" x1="230" y1="270" x2="790" y2="460" gradientUnits="userSpaceOnUse"><stop stop-color="#a7652e"/><stop offset="1" stop-color="#a96834"/></linearGradient>
+ <linearGradient id="paper" x1="320" y1="180" x2="590" y2="450" gradientUnits="userSpaceOnUse"><stop stop-color="#f7ecd8"/><stop offset="1" stop-color="#f2e7d3"/></linearGradient>
+ <linearGradient id="pink" x2="1" y2="1"><stop stop-color="#ead0b1"/><stop offset="1" stop-color="#e4c3a5"/></linearGradient>
+ <linearGradient id="green" x2="1" y2="1"><stop stop-color="#b8ba98"/><stop offset="1" stop-color="#a8ac88"/></linearGradient>
+ <path id="seam" d="M249 371V690C249 771 310 831 409 831H615C713 831 774 773 774 692V408"/>
+ <path id="leaf" d="M489 735C501 705 504 667 508 632M508 632C485 581 507 550 553 520C564 588 539 599 508 632ZM496 685C495 634 478 607 438 591C438 639 458 661 492 674M499 711C517 667 532 646 580 642C571 681 548 694 515 700"/>
+</defs>
+<rect width="1024" height="1024" rx="222" fill="url(#bg)"/>
+<g stroke="#422313" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
+<path d="M222 350C218 303 253 277 296 277L717 278C768 278 802 296 802 343V701H222Z" fill="url(#inside)"/>
+<path d="M231 337C230 306 261 288 298 286M765 298C790 310 794 326 794 351" stroke="#d79b56" stroke-width="6" opacity=".55"/>
+<path d="M649 199L747 225Q782 232 771 269L738 408L647 436Z" fill="url(#green)"/>
+<path d="M550 178L647 170Q683 165 681 202L672 420L592 451Z" fill="url(#pink)"/>
+<path d="M324 194L530 144Q563 136 572 169L634 449L344 490L289 240Q281 207 324 194Z" fill="url(#paper)"/>
+</g>
+<g fill="#c4a47c" stroke="#c4a47c" stroke-linecap="round">
+<circle cx="358.5" cy="260.5" r="17" stroke="none"/>
+<path d="M359 309L540 263M366 345L473 319" stroke-width="11"/>
+</g>
+<path d="M222 330C242 330 252 340 273 359C341 423 414 449 487 447C568 448 631 423 701 396C747 378 778 367 802 369V696C802 792 725 859 624 859H405C303 859 222 796 222 699Z" fill="url(#leather)" stroke="#422313" stroke-width="9" stroke-linejoin="round"/>
+<path d="M229 341C248 342 257 354 278 372C342 430 415 458 488 456C570 457 636 431 706 405C751 387 778 378 794 378" stroke="#e4ad70" stroke-width="6" opacity=".7"/>
+<path d="M232 698C233 787 305 850 405 850H624C722 850 791 788 793 701" stroke="#d79855" stroke-width="4" opacity=".4"/>
+<use xlink:href="#seam" transform="translate(0 3)" stroke="#e3a263" stroke-width="10" stroke-dasharray="21 23" stroke-linecap="round" opacity=".6"/>
+<use xlink:href="#seam" stroke="#5c3016" stroke-width="7" stroke-dasharray="21 23" stroke-linecap="round"/>
+<use xlink:href="#leaf" transform="translate(1 3)" stroke="#e1a064" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".65"/>
+<use xlink:href="#leaf" stroke="#76401e" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<use xlink:href="#leaf" stroke="#542c16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

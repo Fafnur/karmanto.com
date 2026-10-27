@@ -15,12 +15,19 @@
   не пишем; `Eager` (бывший `Default`) — только с обоснованием в `docs/decisions.md`. Сборщик `@angular/build` (esbuild).
 - SSG: `outputMode: "static"`, все серверные роуты `RenderMode.Prerender`. Express/Node-сервера нет.
 - Стили: глобальный `apps/site/src/styles.scss`, **Tailwind 3.4** (`apps/site/tailwind.config.js`, Angular
-  подхватывает его сам). Не v4: сайт должен работать в старых браузерах из `.browserslistrc`. Токены (палитра
-  «Песочная» приложения, светлая и тёмная тема) — в `theme.extend` конфига, значения цветов — CSS-переменные обеих
-  тем в `styles.scss`, новый цвет — в обе темы (задача 2). Модификаторы прозрачности (`bg-primary/50`) — да,
-  утилиты `bg-opacity-*` выключены.
-- Шрифт — только Noto Sans variable (как в приложении), файлы `@fontsource-variable` копируются в `/fonts/`
-  (`assets`), `@font-face` — в `styles.scss` (задача 2).
+  подхватывает его сам). Не v4: сайт должен работать в старых браузерах из `.browserslistrc`. Токены — палитра
+  «Песочная» приложения в `theme.extend`: `bg-background`, `bg-paper`, `border-outline`, `text-ink`,
+  `text-ink-secondary`, `text-ink-muted`, `bg-primary`, `text-on-primary`, `bg-primary-container`, `text-know`,
+  `text-again`, `text-error`, `shadow-paper`; радиусы `rounded-button` (14), `rounded-card` (18), `rounded-block` (24),
+  `rounded-full`. Значения цветов — CSS-переменные светлой и тёмной темы в `styles.scss`, новый цвет — в обе темы.
+  Модификаторы прозрачности (`bg-primary/50`) — да, утилиты `bg-opacity-*` выключены.
+- Темы: без класса на `<html>` — системная (`prefers-color-scheme`, по умолчанию), `theme-light`, `theme-dark`.
+  Скрипт в `index.html` ставит класс и `theme-color` до первой отрисовки; ключ и цвета — общие с `ThemeService`
+  (`@karmanto/ui/theme-menu`).
+- Шрифт — только Noto Sans variable (как в приложении, `font-sans`): файлы `@fontsource-variable/noto-sans`
+  копируются в `/fonts/` (`assets`), `@font-face` с `unicode-range` — в `styles.scss`: `latin`, `latin-ext`,
+  `cyrillic`, `greek`, `vietnamese`. Preload шрифта локали — `provideFontPreload()` в серверном конфиге.
+- Бренд — иконка приложения как есть (`favicon.svg`, она же в шапке) + вордмарк текстом; правила — `brandbook/README.md`.
 - Адаптивность — три разрешения на брейкпоинтах Tailwind, mobile-first: handset (< 768 px, без префикса),
   tablet (`md:`, 768–1023 px), web (`lg:`, ≥ 1024 px). e2e гоняются на всех трёх (Pixel 7, 820×1180, Desktop).
 - Старые браузеры: синтаксис понижает сборка, недостающие API — точечные модули `core-js/stable/*` в
@@ -46,6 +53,7 @@
 ## Проекты
 
 - `apps/site` — сайт (префикс селекторов `km`).
+- `brandbook/` — мини-брендбук (англ.): имя, иконка, цвета, шрифт, файлы сайта.
 - `apps/site-e2e` — e2e. `contract.spec.ts` закрепляет адреса, которые открывает приложение: их не менять.
 - `libs/core` (`@karmanto/core`) — общее без UI: адреса `PATHS` и `toRoutes`, `SITE`, `LOCALES`, хранилище
   `LocalStorage`, позже — метаданные.
