@@ -1,0 +1,10 @@
+{
+  "name": "ui/buttons",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/buttons/src",
+  "prefix": "km",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui/buttons --web",
+  "targets": {}
+}

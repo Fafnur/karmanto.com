@@ -25,7 +25,13 @@
       "@karmanto/support/page": ["./libs/support/page/src/index.ts"],
       "@karmanto/delete-account/page": ["./libs/delete-account/page/src/index.ts"],
       "@karmanto/contact/page": ["./libs/contact/page/src/index.ts"],
-      "@karmanto/not-found/page": ["./libs/not-found/page/src/index.ts"]
+      "@karmanto/not-found/page": ["./libs/not-found/page/src/index.ts"],
+      "@karmanto/ui/buttons": ["./libs/ui/buttons/src/index.ts"],
+      "@karmanto/ui/theme-menu": ["./libs/ui/theme-menu/src/index.ts"],
+      "@karmanto/ui/language-menu": ["./libs/ui/language-menu/src/index.ts"],
+      "@karmanto/ui/language-hint": ["./libs/ui/language-hint/src/index.ts"],
+      "@karmanto/ui/header": ["./libs/ui/header/src/index.ts"],
+      "@karmanto/ui/footer": ["./libs/ui/footer/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

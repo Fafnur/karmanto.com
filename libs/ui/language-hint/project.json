@@ -1,0 +1,10 @@
+{
+  "name": "ui/language-hint",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/language-hint/src",
+  "prefix": "km",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui/language-hint --web",
+  "targets": {}
+}

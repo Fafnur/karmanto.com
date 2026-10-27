@@ -2,38 +2,83 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="3075139961583935117" datatype="html">
+        <source>Skip to content</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+        <note priority="1" from="description">Skip link for keyboard users, jumps over the header to the page content</note>
+        <note priority="1" from="meaning">Layout</note>
+      </trans-unit>
+      <trans-unit id="8701920022482021708" datatype="html">
+        <source>Karmanto is a flashcard app for learning words with spaced repetition: add a word, answer «I know» or «Don&apos;t know», and it comes back right on time.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Meta description of the home page</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
       <trans-unit id="4590274344239037044" datatype="html">
         <source>Privacy Policy</source>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">19</context>
         </context-group>
         <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Privacy page</note>
+      </trans-unit>
+      <trans-unit id="7168086486871850081" datatype="html">
+        <source>How the Karmanto app and website collect, use and protect personal data.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
         <note priority="1" from="meaning">Privacy page</note>
       </trans-unit>
       <trans-unit id="6356367486172472875" datatype="html">
         <source>Terms of Use</source>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">27</context>
         </context-group>
         <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Terms page</note>
+      </trans-unit>
+      <trans-unit id="7329075191451563652" datatype="html">
+        <source>Terms of use of the Karmanto app and website.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
         <note priority="1" from="meaning">Terms page</note>
       </trans-unit>
       <trans-unit id="3706492045074766153" datatype="html">
         <source>Consent to Personal Data Processing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">35</context>
         </context-group>
         <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Consent page</note>
+      </trans-unit>
+      <trans-unit id="1840732260652860333" datatype="html">
+        <source>Consent to the processing of personal data sent through the Karmanto contact form.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
         <note priority="1" from="meaning">Consent page</note>
       </trans-unit>
       <trans-unit id="324541860605189093" datatype="html">
         <source>Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">43</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
@@ -42,11 +87,20 @@
         <note priority="1" from="description">Page title in the browser tab</note>
         <note priority="1" from="meaning">Support page</note>
       </trans-unit>
+      <trans-unit id="8596239764810898970" datatype="html">
+        <source>Answers to common questions about Karmanto and how to contact support.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
+        <note priority="1" from="meaning">Support page</note>
+      </trans-unit>
       <trans-unit id="2722911537974880165" datatype="html">
         <source>Delete Account</source>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">51</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
@@ -55,11 +109,20 @@
         <note priority="1" from="description">Page title in the browser tab</note>
         <note priority="1" from="meaning">Delete account page</note>
       </trans-unit>
+      <trans-unit id="1202839041405410745" datatype="html">
+        <source>How to delete your Karmanto account and what happens to your data.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
       <trans-unit id="6475029266506632502" datatype="html">
         <source>Contact Us</source>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">59</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.html</context>
@@ -68,15 +131,24 @@
         <note priority="1" from="description">Page title in the browser tab</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
+      <trans-unit id="4222409043620178169" datatype="html">
+        <source>Send a message to the Karmanto team.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description">Meta description</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
       <trans-unit id="3223372976039553190" datatype="html">
         <source>Page not found</source>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">67</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">74</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/not-found/page/src/lib/not-found-page.html</context>
@@ -132,6 +204,145 @@
         </context-group>
         <note priority="1" from="description">Explanation under the heading</note>
         <note priority="1" from="meaning">Not found page</note>
+      </trans-unit>
+      <trans-unit id="7416693212987066571" datatype="html">
+        <source>Documents and support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label of the footer navigation</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="3069458297716460483" datatype="html">
+        <source>Privacy Policy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">6,10</context>
+        </context-group>
+        <note priority="1" from="description">Link to the privacy policy</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="3897697549281426782" datatype="html">
+        <source>Terms of Use</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">10,13</context>
+        </context-group>
+        <note priority="1" from="description">Link to the terms of use</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="9213317389349102501" datatype="html">
+        <source>Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">13,17</context>
+        </context-group>
+        <note priority="1" from="description">Link to the support page</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="1513577516329277067" datatype="html">
+        <source>Delete account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">20,25</context>
+        </context-group>
+        <note priority="1" from="description">Link to the account deletion instructions</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="2006418583085660987" datatype="html">
+        <source>Main</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label of the main navigation</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="7803584757425428573" datatype="html">
+        <source>Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label of the mobile menu button</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="8413653960395479564" datatype="html">
+        <source>How it works</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">59,64</context>
+        </context-group>
+        <note priority="1" from="description">Navigation link to the «How it works» section of the home page</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="7573290588093625348" datatype="html">
+        <source>Features</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">68,73</context>
+        </context-group>
+        <note priority="1" from="description">Navigation link to the features section of the home page</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="8174959178187556041" datatype="html">
+        <source>Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/header/src/lib/header.html</context>
+          <context context-type="linenumber">76,81</context>
+        </context-group>
+        <note priority="1" from="description">Navigation link to the support page</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="7837444525333605773" datatype="html">
+        <source>Choose language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/language-menu/src/lib/language-menu.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label of the language button</note>
+        <note priority="1" from="meaning">Language menu</note>
+      </trans-unit>
+      <trans-unit id="1977730365682633238" datatype="html">
+        <source>Choose theme</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/theme-menu/src/lib/theme-menu.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+        <note priority="1" from="description">Accessible label of the theme button</note>
+        <note priority="1" from="meaning">Theme menu</note>
+      </trans-unit>
+      <trans-unit id="7838982646277289096" datatype="html">
+        <source>System</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/theme-menu/src/lib/theme-menu.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Theme that follows the device settings, as in the app settings</note>
+        <note priority="1" from="meaning">Theme menu</note>
+      </trans-unit>
+      <trans-unit id="8605551183195729653" datatype="html">
+        <source>Light</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/theme-menu/src/lib/theme-menu.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Light theme, as in the app settings</note>
+        <note priority="1" from="meaning">Theme menu</note>
+      </trans-unit>
+      <trans-unit id="6340268109388433160" datatype="html">
+        <source>Dark</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/theme-menu/src/lib/theme-menu.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Dark theme, as in the app settings</note>
+        <note priority="1" from="meaning">Theme menu</note>
       </trans-unit>
     </body>
   </file>

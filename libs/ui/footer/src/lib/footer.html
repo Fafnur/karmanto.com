@@ -1,0 +1,29 @@
+<div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 text-sm md:flex-row md:items-start md:justify-between md:px-8">
+  <nav aria-label="Documents and support" i18n-aria-label="Footer|Accessible label of the footer navigation">
+    <ul class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-x-6">
+      <li>
+        <a class="text-ink-secondary hover:text-ink" [routerLink]="paths.privacy" i18n="Footer|Link to the privacy policy"
+          >Privacy Policy</a
+        >
+      </li>
+      <li>
+        <a class="text-ink-secondary hover:text-ink" [routerLink]="paths.terms" i18n="Footer|Link to the terms of use">Terms of Use</a>
+      </li>
+      <li>
+        <a class="text-ink-secondary hover:text-ink" [routerLink]="paths.support" i18n="Footer|Link to the support page">Support</a>
+      </li>
+      <li>
+        <a
+          class="text-ink-secondary hover:text-ink"
+          [routerLink]="paths.deleteAccount"
+          i18n="Footer|Link to the account deletion instructions"
+          >Delete account</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <div class="flex flex-col gap-2 text-ink-muted md:items-end">
+    <a [href]="'mailto:' + site.email">{{ site.email }}</a>
+    <span>© {{ year }} {{ site.name }}</span>
+  </div>
+</div>

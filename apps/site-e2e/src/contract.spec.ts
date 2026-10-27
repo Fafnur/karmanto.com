@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures';
 
 /**
  * Contract with the mobile app: these URLs are opened from the app and must never break.

@@ -1,0 +1,80 @@
+<div class="mx-auto flex h-16 max-w-6xl items-center gap-8 px-4 md:px-8">
+  <a class="flex items-center gap-3 text-ink no-underline hover:no-underline" [routerLink]="paths.home">
+    <!-- The app icon as is (brandbook): never recolored, so an image rather than a mask. -->
+    <img class="h-9 w-9" src="/favicon.svg" alt="" width="36" height="36" />
+    <span class="text-xl font-semibold">{{ site.name }}</span>
+  </a>
+
+  <nav class="hidden md:block" aria-label="Main" i18n-aria-label="Header|Accessible label of the main navigation">
+    <ng-container *ngTemplateOutlet="links" />
+  </nav>
+
+  <div class="ml-auto flex items-center gap-2">
+    <!-- CDK Menu is ~22 KB gzip: hydrated when the browser is idle, after the first paint. Not «on interaction»: Enter
+         fires keydown and click, both get replayed, and the menu opens and closes at once. -->
+    @defer (hydrate on idle) {
+      <km-theme-menu />
+      <km-language-menu />
+    }
+    <button
+      #toggle
+      type="button"
+      class="flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-paper md:hidden"
+      aria-controls="mobile-navigation"
+      [attr.aria-expanded]="$open()"
+      aria-label="Menu"
+      i18n-aria-label="Header|Accessible label of the mobile menu button"
+      (click)="onToggle()"
+    >
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        @if ($open()) {
+          <path d="M6 6l12 12M18 6L6 18" />
+        } @else {
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        }
+      </svg>
+    </button>
+  </div>
+</div>
+
+@if ($open()) {
+  <nav
+    id="mobile-navigation"
+    class="border-t border-outline px-4 pb-4 md:hidden"
+    aria-label="Main"
+    i18n-aria-label="Header|Accessible label of the main navigation"
+  >
+    <ng-container *ngTemplateOutlet="links" />
+  </nav>
+}
+
+<ng-template #links>
+  <ul class="flex flex-col gap-1 pt-2 md:flex-row md:gap-6 md:pt-0">
+    <li>
+      <a
+        class="block py-2 font-semibold text-ink-secondary hover:text-ink"
+        [routerLink]="paths.home"
+        [fragment]="fragments.how"
+        i18n="Header|Navigation link to the «How it works» section of the home page"
+        >How it works</a
+      >
+    </li>
+    <li>
+      <a
+        class="block py-2 font-semibold text-ink-secondary hover:text-ink"
+        [routerLink]="paths.home"
+        [fragment]="fragments.features"
+        i18n="Header|Navigation link to the features section of the home page"
+        >Features</a
+      >
+    </li>
+    <li>
+      <a
+        class="block py-2 font-semibold text-ink-secondary hover:text-ink"
+        [routerLink]="paths.support"
+        i18n="Header|Navigation link to the support page"
+        >Support</a
+      >
+    </li>
+  </ul>
+</ng-template>
