@@ -1,0 +1,10 @@
+{
+  "name": "home/page",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/home/page/src",
+  "prefix": "km",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project home/page --web",
+  "targets": {}
+}

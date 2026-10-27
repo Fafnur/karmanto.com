@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4590274344239037044" datatype="html">
+        <source>Privacy Policy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Privacy page</note>
+      </trans-unit>
+      <trans-unit id="6356367486172472875" datatype="html">
+        <source>Terms of Use</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Terms page</note>
+      </trans-unit>
+      <trans-unit id="3706492045074766153" datatype="html">
+        <source>Consent to Personal Data Processing</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Consent page</note>
+      </trans-unit>
+      <trans-unit id="324541860605189093" datatype="html">
+        <source>Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Support page</note>
+      </trans-unit>
+      <trans-unit id="2722911537974880165" datatype="html">
+        <source>Delete Account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Delete account page</note>
+      </trans-unit>
+      <trans-unit id="6475029266506632502" datatype="html">
+        <source>Contact Us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="3223372976039553190" datatype="html">
+        <source>Page not found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/site/src/app/app.routes.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/not-found/page/src/lib/not-found-page.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Page title in the browser tab</note>
+        <note priority="1" from="meaning">Not found page</note>
+      </trans-unit>
+      <trans-unit id="4976405609760757335" datatype="html">
+        <source>This page is coming soon.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/contact/page/src/lib/contact-page.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/delete-account/page/src/lib/delete-account-page.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/legal/page/src/lib/legal-page.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/support/page/src/lib/support-page.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder text until the page is ready</note>
+        <note priority="1" from="meaning">Stub page</note>
+      </trans-unit>
+      <trans-unit id="6160972072275593648" datatype="html">
+        <source>Karmanto</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Page heading: app name</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5555603115919921089" datatype="html">
+        <source>Words that are always with you.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <note priority="1" from="description">Subheading under the app name: the app tagline</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2065462700811440202" datatype="html">
+        <source>The page you are looking for does not exist or has been moved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/not-found/page/src/lib/not-found-page.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <note priority="1" from="description">Explanation under the heading</note>
+        <note priority="1" from="meaning">Not found page</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -5,16 +5,28 @@
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "bundler",
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "target": "es2022",
+    "module": "preserve",
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "strict": false,
-    "paths": {}
+    "paths": {
+      "@karmanto/core": ["./libs/core/src/index.ts"],
+      "@karmanto/home/page": ["./libs/home/page/src/index.ts"],
+      "@karmanto/legal/page": ["./libs/legal/page/src/index.ts"],
+      "@karmanto/support/page": ["./libs/support/page/src/index.ts"],
+      "@karmanto/delete-account/page": ["./libs/delete-account/page/src/index.ts"],
+      "@karmanto/contact/page": ["./libs/contact/page/src/index.ts"],
+      "@karmanto/not-found/page": ["./libs/not-found/page/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

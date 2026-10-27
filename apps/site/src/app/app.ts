@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [NxWelcome, RouterModule],
-  selector: 'app-root',
+  selector: 'km-root',
+  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
+  host: { class: 'flex min-h-screen flex-col' },
 })
-export class App {
-  protected title = 'site';
-}
+export class App {}

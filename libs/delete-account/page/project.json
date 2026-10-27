@@ -1,0 +1,10 @@
+{
+  "name": "delete-account/page",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/delete-account/page/src",
+  "prefix": "km",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project delete-account/page --web",
+  "targets": {}
+}
