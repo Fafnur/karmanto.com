@@ -1,0 +1,10 @@
+{
+  "name": "contact/page",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/contact/page/src",
+  "prefix": "km",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project contact/page --web",
+  "targets": {}
+}

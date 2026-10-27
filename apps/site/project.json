@@ -2,11 +2,11 @@
   "name": "site",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "app",
+  "prefix": "km",
   "sourceRoot": "apps/site/src",
   "tags": [],
   "targets": {
-    "build": {
+    "build-angular": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
@@ -21,7 +21,28 @@
             "input": "apps/site/public"
           }
         ],
-        "styles": ["apps/site/src/styles.scss"]
+        "styles": ["apps/site/src/styles.scss"],
+        "server": "apps/site/src/main.server.ts",
+        "outputMode": "static",
+        "polyfills": [
+          "core-js/stable/array/at",
+          "core-js/stable/array/find-last",
+          "core-js/stable/array/find-last-index",
+          "core-js/stable/array/flat",
+          "core-js/stable/array/flat-map",
+          "core-js/stable/global-this",
+          "core-js/stable/object/from-entries",
+          "core-js/stable/object/has-own",
+          "core-js/stable/promise/all-settled",
+          "core-js/stable/promise/any",
+          "core-js/stable/queue-microtask",
+          "core-js/stable/string/at",
+          "core-js/stable/string/match-all",
+          "core-js/stable/string/replace-all",
+          "@angular/localize/init"
+        ],
+        "localize": true,
+        "i18nMissingTranslation": "error"
       },
       "configurations": {
         "production": {
@@ -30,50 +51,86 @@
               "type": "initial",
               "maximumWarning": "500kb",
               "maximumError": "1mb"
-            },
-            {
-              "type": "anyComponentStyle",
-              "maximumWarning": "4kb",
-              "maximumError": "8kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "optimization": {
+            "scripts": true,
+            "styles": {
+              "minify": true,
+              "inlineCritical": false
+            },
+            "fonts": true
+          }
         },
         "development": {
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "localize": ["en"]
         }
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build-angular"],
+      "cache": true,
+      "inputs": ["production", "^production", "{workspaceRoot}/tools/scripts/postbuild.mjs"],
+      "outputs": ["{workspaceRoot}/dist/apps/site/browser/404.html"],
+      "options": {
+        "command": "node tools/scripts/postbuild.mjs"
       }
     },
     "serve": {
       "continuous": true,
-      "readyWhen": {
-        "signal": true
-      },
       "executor": "@angular/build:dev-server",
       "defaultConfiguration": "development",
       "configurations": {
         "production": {
-          "buildTarget": "site:build:production"
+          "buildTarget": "site:build-angular:production"
         },
         "development": {
-          "buildTarget": "site:build:development"
+          "buildTarget": "site:build-angular:development"
         }
+      }
+    },
+    "test": {
+      "executor": "@angular/build:unit-test",
+      "options": {
+        "watch": false,
+        "buildTarget": "site:build-angular:development"
       }
     },
     "serve-static": {
       "continuous": true,
-      "readyWhen": {
-        "signal": true
-      },
       "dependsOn": ["build"],
-      "executor": "@nx/web:file-server",
+      "executor": "nx:run-commands",
       "options": {
-        "buildTarget": "site:build",
-        "port": 4200,
-        "staticFilePath": "dist/apps/site/browser",
-        "spa": true
+        "command": "http-server dist/apps/site/browser -p 4200 -c-1 --silent"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular/build:extract-i18n",
+      "options": {
+        "buildTarget": "site:build-angular",
+        "format": "xlf",
+        "outputPath": "apps/site/src/locale"
+      }
+    }
+  },
+  "i18n": {
+    "sourceLocale": {
+      "code": "en",
+      "subPath": ""
+    },
+    "locales": {
+      "ru": {
+        "translation": "apps/site/src/locale/messages.ru.xlf",
+        "subPath": "ru"
+      },
+      "es": {
+        "translation": "apps/site/src/locale/messages.es.xlf",
+        "subPath": "es"
       }
     }
   }

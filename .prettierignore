@@ -1,7 +1,30 @@
 # Add files here to ignore them from prettier formatting
 /dist
 /coverage
+/tmp
+/node_modules
+/nginx
+/.vscode
+/.idea
+package-lock.json
+package.json
+yarn.lock
+
+.angular
+/junit
+junit.xml
+
 /.nx/cache
 /.nx/workspace-data
-yarn.lock
-.angular
+.nx/self-healing
+
+# Owner-authored docs: Prettier rewraps list items and changes their meaning
+docs/plan.md
+docs/app-tasks.md
+
+# Vendored agent skills (managed by `npx skills`)
+/.claude/skills
+skills-lock.json
+
+# Legal texts from the owner: never reformatted
+/content
