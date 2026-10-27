@@ -109,7 +109,7 @@
 - [ ] Репозиторий `karmanto.com` на GitHub (публичный), настройки мёржа и ruleset как у образца; агенту — доступ
       к нему и к `isomantika.com`.
 - [ ] Сервер: папка `/var/www/karmanto.com`, ключ `karmanto-deploy`, секреты `DEPLOY_*` в репозитории
-      (шаги — `docs/hosting.md` после задачи 1).
+      (шаги — `docs/hosting.md` после задачи «Деплой»).
 - [ ] DNS у регистратора: `karmanto.com` и `karmanto.ru` — `A → 130.49.174.192`, без `AAAA`; `www` обоих — CNAME
       на свой домен. Сертификаты Let's Encrypt на все четыре имени.
 - [ ] Почта `support@karmanto.com` — ImprovMX (MX, SPF, DKIM, DMARC как у `isomantika.com`).
@@ -144,21 +144,29 @@
   `TrailingSlashPathLocationStrategy`, `site:build` с пост-сборочным шагом (`404.html`), `site:serve-static`.
 - **Контрактный e2e:** шесть адресов документов из «Зафиксированных решений» и три адреса поддержки отдают 200 и
   `<h1>`; главная каждой локали — 200 и правильный `lang`; несуществующий адрес — 404-страница.
-- CI — `.github/workflows/ci.yml` образца: PR — `nx affected`, `main` — `run-many` + деплой артефакта rsync
-  (`cancel-in-progress` только для PR).
+- CI — `.github/workflows/ci.yml` образца **без деплоя**: PR — `nx affected`, `main` — `run-many`
+  (`cancel-in-progress` только для PR). Деплой — задача «Деплой» ниже.
+- `CLAUDE.md` — по образцу, с именами Karmanto и правилами этого плана; `.claude/skills`: `angular-developer`
+  (через `npx skills add`, версия в `skills-lock.json`), `update-vendors`, `update-i18n` — адаптировать имена.
+- `docs/plan.md` (этот файл), `docs/decisions.md` (журнал grill от 2026-10-27 уже лежит), `docs/progress.md`.
+- `README.md` — заготовка витрины по фактам из этого плана и `docs/plan.md` приложения (без цены).
+
+Готово, когда `yarn check` зелёный локально и в CI.
+
+## Деплой (когда будут домен и сервер)
+
+Отложено из задачи 1 (`docs/decisions.md`, 2026-10-27): домен ещё не перенесён. Делается, когда готов этап 0
+(сервер, DNS, сертификаты, секреты `DEPLOY_*`), — до публикации экрана согласия Google OAuth.
+
+- Job `deploy` в `ci.yml` образца: на `main` — артефакт `dist/apps/site/browser`, rsync на сервер.
 - `deploy/nginx/karmanto.com.conf` по образцу конфига `isomantika.com` (кэш, своя 404 у локали, `/privacy` →
   `/privacy/`, `index.csr.html` закрыт, HSTS без preload, gzip) **плюс** блоки 301 для `www.karmanto.com`,
   `karmanto.ru` и `www.karmanto.ru` (http и https) на `https://karmanto.com$request_uri`.
   Проверить конфиг в Docker `nginx:1.28` с собранным сайтом, как в образце.
 - `docs/hosting.md` — шаги для владельца (по образцу), включая сертификат на четыре имени
   (`certbot certonly --nginx -d karmanto.com -d www.karmanto.com -d karmanto.ru -d www.karmanto.ru`).
-- `CLAUDE.md` — по образцу, с именами Karmanto и правилами этого плана; `.claude/skills`: `angular-developer`
-  (через `npx skills add`, версия в `skills-lock.json`), `update-vendors`, `update-i18n` — адаптировать имена.
-- `docs/plan.md` (этот файл), `docs/decisions.md` (журнал grill от 2026-10-27 уже лежит), `docs/progress.md`.
-- `README.md` — заготовка витрины по фактам из этого плана и `docs/plan.md` приложения (без цены).
 
-Готово, когда `yarn check` зелёный, пустой сайт открывается на `https://karmanto.com`, а `karmanto.ru` и `www.*`
-редиректят на него.
+Готово, когда сайт открывается на `https://karmanto.com`, а `karmanto.ru` и `www.*` редиректят на него.
 
 ## 2. Дизайн и оболочка
 
