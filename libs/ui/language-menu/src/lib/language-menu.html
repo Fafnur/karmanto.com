@@ -1,0 +1,36 @@
+<button
+  type="button"
+  class="flex items-center gap-2 rounded-full border border-outline px-3 py-2 text-sm font-semibold text-ink transition-colors hover:border-primary"
+  [cdkMenuTriggerFor]="menu"
+>
+  <img class="h-3 w-4 rounded-sm object-cover" [src]="current.flag" alt="" width="16" height="12" />
+  <span>{{ current.code }}</span>
+  <!-- After the visible code, not instead of it: the accessible name must contain what is seen (voice control). -->
+  <span class="sr-only" i18n="Language menu|Accessible label of the language button">Choose language</span>
+  <svg class="h-4 w-4 text-ink-muted" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z" />
+  </svg>
+</button>
+
+<ng-template #menu>
+  <div cdkMenu class="mt-2 min-w-44 rounded-card border border-outline bg-paper p-1 shadow-paper">
+    @for (link of $links(); track link.locale.id) {
+      <a
+        cdkMenuItem
+        class="flex items-center gap-3 rounded-button px-3 py-2 text-ink no-underline outline-none hover:bg-background hover:no-underline focus:bg-background"
+        [href]="link.href"
+        [attr.hreflang]="link.locale.id"
+        [attr.lang]="link.locale.id"
+        [attr.aria-current]="link.current ? 'true' : null"
+      >
+        <img class="h-3 w-4 rounded-sm object-cover" [src]="link.locale.flag" alt="" width="16" height="12" />
+        <span class="flex-1">{{ link.locale.label }}</span>
+        @if (link.current) {
+          <svg class="h-4 w-4 text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" />
+          </svg>
+        }
+      </a>
+    }
+  </div>
+</ng-template>

@@ -1,0 +1,62 @@
+<button
+  type="button"
+  class="flex items-center justify-center rounded-full border border-outline p-2 text-ink transition-colors hover:border-primary"
+  [cdkMenuTriggerFor]="menu"
+  aria-label="Choose theme"
+  i18n-aria-label="Theme menu|Accessible label of the theme button"
+>
+  <!-- Visibility by the class on `<html>`: no theme class — the system one. -->
+  <ng-container *ngTemplateOutlet="icon; context: { $implicit: 'system', class: 'block [.theme-light_&]:hidden [.theme-dark_&]:hidden' }" />
+  <ng-container *ngTemplateOutlet="icon; context: { $implicit: 'light', class: 'hidden [.theme-light_&]:block' }" />
+  <ng-container *ngTemplateOutlet="icon; context: { $implicit: 'dark', class: 'hidden [.theme-dark_&]:block' }" />
+</button>
+
+<ng-template #menu>
+  <div cdkMenu class="mt-2 min-w-44 rounded-card border border-outline bg-paper p-1 shadow-paper">
+    @for (option of options; track option.mode) {
+      <button
+        type="button"
+        cdkMenuItemRadio
+        class="flex w-full items-center gap-3 rounded-button px-3 py-2 text-left text-ink outline-none hover:bg-background focus:bg-background"
+        [cdkMenuItemChecked]="theme.$mode() === option.mode"
+        (cdkMenuItemTriggered)="onSelect(option.mode)"
+      >
+        <ng-container *ngTemplateOutlet="icon; context: { $implicit: option.mode, class: 'text-ink-muted' }" />
+        <span class="flex-1">{{ option.label }}</span>
+        @if (theme.$mode() === option.mode) {
+          <svg class="h-4 w-4 text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" />
+          </svg>
+        }
+      </button>
+    }
+  </div>
+</ng-template>
+
+<ng-template #icon let-mode let-class="class">
+  <svg
+    class="h-5 w-5 shrink-0"
+    [class]="class"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.75"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    @switch (mode) {
+      @case ('dark') {
+        <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z" />
+      }
+      @case ('light') {
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+      }
+      @case ('system') {
+        <rect x="3" y="4" width="18" height="12" rx="2" />
+        <path d="M8 20h8M12 16v4" />
+      }
+    }
+  </svg>
+</ng-template>

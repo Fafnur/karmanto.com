@@ -3,6 +3,17 @@
 Решения, принятые по ходу работы, которых нет в [plan.md](plan.md) или которые его меняют. Новые записи — сверху.
 Решения образца (`docs/decisions.md` репозитория `isomantika.com`) действуют, если здесь не сказано иначе.
 
+## 2026-10-27 — grill задачи 2
+
+- **Имена цветовых классов** — как предложено в плане: `bg-background`, `bg-paper`, `border-outline`, `text-ink`,
+  `text-ink-secondary`, `text-ink-muted`, `bg-primary`, `text-on-primary`, `bg-primary-container`, `text-know`,
+  `text-again`, `text-error`, `shadow-paper` («ink» — чтобы не было `text-text-primary`).
+- **Подмножества Noto Sans:** `latin`, `latin-ext`, `cyrillic`, `greek`, `vietnamese`; без `cyrillic-ext`
+  (болгарскому, русскому и украинскому хватает основной кириллицы). Остальные письменности — системный шрифт.
+- **`shadow-paper`** — двойная, как у `PaperCard` приложения: `0 1px 2px` и `0 8px 24px` цветом токена `shadow`.
+- **Фавикон — `favicon.svg`** из иконки приложения как есть; `favicon.ico` (16/32) — запасной для старых браузеров,
+  отдельного упрощённого варианта нет.
+
 ## 2026-10-27 — grill задачи 1
 
 - **Версии — новее образца:** Nx 24, Angular 22.2, TypeScript 6 из воркспейса владельца. Зависимости образца

@@ -19,6 +19,16 @@
           {
             "glob": "**/*",
             "input": "apps/site/public"
+          },
+          {
+            "glob": "noto-sans-{latin,latin-ext,cyrillic,greek,vietnamese}-wght-normal.woff2",
+            "input": "node_modules/@fontsource-variable/noto-sans/files",
+            "output": "fonts"
+          },
+          {
+            "glob": "{us,ru}.svg",
+            "input": "node_modules/flag-icons/flags/4x3",
+            "output": "flags"
           }
         ],
         "styles": ["apps/site/src/styles.scss"],

@@ -293,6 +293,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/cdk@npm:~22.2.0":
+  version: 22.2.4
+  resolution: "@angular/cdk@npm:22.2.4"
+  dependencies:
+    parse5: "npm:^8.0.0"
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/common": ^22.0.0 || ^23.0.0
+    "@angular/core": ^22.0.0 || ^23.0.0
+    "@angular/forms": ^22.0.0 || ^23.0.0
+    "@angular/platform-browser": ^22.0.0 || ^23.0.0
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 10c0/4bf72ad66298b3c8ed1b19f1ab1bbe9323281ba3489142bc74773f7cbef3a9e50c30cdff9a559b09dd058f7044e10bf0347a711afe541f346ab009007e5583b4
+  languageName: node
+  linkType: hard
+
 "@angular/cli@npm:~22.2.0":
   version: 22.2.4
   resolution: "@angular/cli@npm:22.2.4"
@@ -516,6 +532,17 @@ __metadata:
   version: 2.3.9
   resolution: "@asamuzakjp/nwsapi@npm:2.3.9"
   checksum: 10c0/869b81382e775499c96c45c6dbe0d0766a6da04bcf0abb79f5333535c4e19946851acaa43398f896e2ecc5a1de9cf3db7cf8c4b1afac1ee3d15e21584546d74d
+  languageName: node
+  linkType: hard
+
+"@axe-core/playwright@npm:^4.13.0":
+  version: 4.14.0
+  resolution: "@axe-core/playwright@npm:4.14.0"
+  dependencies:
+    axe-core: "npm:~4.14.0"
+  peerDependencies:
+    playwright-core: ">= 1.0.0"
+  checksum: 10c0/a42bca2305bbb80a374be9ff6642cac7b45f5f0aef1be9170ae42617c3423501ab1a33c8581641a71554a0c6a69f6ca512a5cc6e320ed197339a9ac4edfa713c
   languageName: node
   linkType: hard
 
@@ -2366,6 +2393,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource-variable/noto-sans@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource-variable/noto-sans@npm:5.3.0"
+  checksum: 10c0/5518c158bc8bdd067ac6e59972bdfb019888c5bf03da4c1d6f208995ed642ea7ae67c04e4f8efd8f21c1bc40998c3654b0bf21d2563947b98ff9c35a52fd1edc
+  languageName: node
+  linkType: hard
+
 "@harperfast/extended-iterable@npm:^1.0.3":
   version: 1.0.5
   resolution: "@harperfast/extended-iterable@npm:1.0.5"
@@ -2761,6 +2795,7 @@ __metadata:
     "@angular-devkit/core": "npm:~22.2.0"
     "@angular-devkit/schematics": "npm:~22.2.0"
     "@angular/build": "npm:~22.2.0"
+    "@angular/cdk": "npm:~22.2.0"
     "@angular/cli": "npm:~22.2.0"
     "@angular/common": "npm:~22.2.0"
     "@angular/compiler": "npm:~22.2.0"
@@ -2773,7 +2808,9 @@ __metadata:
     "@angular/platform-server": "npm:~22.2.0"
     "@angular/router": "npm:~22.2.0"
     "@angular/ssr": "npm:~22.2.0"
+    "@axe-core/playwright": "npm:^4.13.0"
     "@eslint/js": "npm:^9.8.0"
+    "@fontsource-variable/noto-sans": "npm:^5.3.0"
     "@nx/angular": "npm:24.0.2"
     "@nx/devkit": "npm:24.0.2"
     "@nx/eslint": "npm:24.0.2"
@@ -2787,6 +2824,7 @@ __metadata:
     "@playwright/test": "npm:^1.37.0"
     "@schematics/angular": "npm:~22.2.0"
     "@swc/helpers": "npm:~0.5.18"
+    "@tailwindcss/typography": "npm:^0.5.20"
     "@types/node": "npm:^22.0.0"
     "@typescript-eslint/utils": "npm:^8.58.0"
     "@vitest/coverage-v8": "npm:^4.0.0"
@@ -2798,6 +2836,7 @@ __metadata:
     eslint-plugin-import-x: "npm:^4.17.1"
     eslint-plugin-playwright: "npm:^1.6.2"
     eslint-plugin-simple-import-sort: "npm:^14.0.0"
+    flag-icons: "npm:^7.5.0"
     http-server: "npm:^14.1.1"
     jsdom: "npm:^27.1.0"
     nx: "npm:24.0.2"
@@ -4206,6 +4245,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tailwindcss/typography@npm:^0.5.20":
+  version: 0.5.20
+  resolution: "@tailwindcss/typography@npm:0.5.20"
+  dependencies:
+    postcss-selector-parser: "npm:6.0.10"
+  peerDependencies:
+    tailwindcss: "*"
+  checksum: 10c0/e42f9347a7802d620c56ea3379dc7986c0eece9af2d0ae170d530a8c8ef9815f6fdb6b23b2ae76c9832314dcca125e6a166bfec1c88326495896afeab64c1c2e
+  languageName: node
+  linkType: hard
+
 "@tybys/wasm-util@npm:0.9.0, @tybys/wasm-util@npm:^0.9.0":
   version: 0.9.0
   resolution: "@tybys/wasm-util@npm:0.9.0"
@@ -4948,6 +4998,13 @@ __metadata:
   version: 3.2.6
   resolution: "async@npm:3.2.6"
   checksum: 10c0/36484bb15ceddf07078688d95e27076379cc2f87b10c03b6dd8a83e89475a3c8df5848859dd06a4c95af1e4c16fc973de0171a77f18ea00be899aca2a4f85e70
+  languageName: node
+  linkType: hard
+
+"axe-core@npm:~4.14.0":
+  version: 4.14.0
+  resolution: "axe-core@npm:4.14.0"
+  checksum: 10c0/8aaa0bf748e0dcf202e8f837951a37b28b4b62d639bed58c07a6890bf035ed6a11ede9f4006db9ca8041db821dc80476c27cff08fd70afa9195ee58fb995a958
   languageName: node
   linkType: hard
 
@@ -6316,6 +6373,13 @@ __metadata:
     locate-path: "npm:^6.0.0"
     path-exists: "npm:^4.0.0"
   checksum: 10c0/062c5a83a9c02f53cdd6d175a37ecf8f87ea5bbff1fdfb828f04bfa021441bc7583e8ebc0872a4c1baab96221fb8a8a275a19809fb93fbc40bd69ec35634069a
+  languageName: node
+  linkType: hard
+
+"flag-icons@npm:^7.5.0":
+  version: 7.6.0
+  resolution: "flag-icons@npm:7.6.0"
+  checksum: 10c0/f5b32155b903ed56ddd2d452166a27d6fff89e082ad1cd32c7891b6fe04b71f73ac2feffd06642173bd3d5fd7bf9a6a0e6b36539463d23b8d36031b135636de3
   languageName: node
   linkType: hard
 
@@ -8289,6 +8353,16 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/c6ae9cb33883a41d7180f8978e80cc185de20101e54caa431cfacdba55472a46cdccf2a25e09fc08111e4a79dc3f75bda5135571808927ea504e8de792534916
+  languageName: node
+  linkType: hard
+
+"postcss-selector-parser@npm:6.0.10":
+  version: 6.0.10
+  resolution: "postcss-selector-parser@npm:6.0.10"
+  dependencies:
+    cssesc: "npm:^3.0.0"
+    util-deprecate: "npm:^1.0.2"
+  checksum: 10c0/a0b27c5e3f7604c8dc7cd83f145fdd7b21448e0d86072da99e0d78e536ba27aa9db2d42024c50aa530408ee517c4bdc0260529e1afb56608f9a82e839c207e82
   languageName: node
   linkType: hard
 

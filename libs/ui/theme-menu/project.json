@@ -1,0 +1,10 @@
+{
+  "name": "ui/theme-menu",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/theme-menu/src",
+  "prefix": "km",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui/theme-menu --web",
+  "targets": {}
+}
