@@ -1,5 +1,11 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "cli": {
+    "packageManager": "yarn"
+  },
+  "tui": {
+    "enabled": false
+  },
   "analytics": false,
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
@@ -17,9 +23,19 @@
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
+    },
+    "@angular/build:unit-test": {
+      "cache": true,
+      "inputs": ["default", "^production"]
     }
   },
   "plugins": [
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    },
     {
       "plugin": "@nx/eslint/plugin",
       "options": {
@@ -29,15 +45,8 @@
     {
       "plugin": "@nx/vitest",
       "options": {
-        "testTargetName": "test",
-        "ciTargetName": "test-ci",
-        "testMode": "watch"
-      }
-    },
-    {
-      "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "e2e"
+        "testMode": "watch",
+        "testTargetName": "test"
       }
     }
   ],
@@ -46,7 +55,27 @@
       "e2eTestRunner": "playwright",
       "linter": "eslint",
       "style": "scss",
-      "unitTestRunner": "vitest-analog"
+      "unitTestRunner": "vitest-angular",
+      "prefix": "km"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "vitest-analog",
+      "style": "none",
+      "prefix": "km",
+      "changeDetection": "OnPush",
+      "skipModule": true
+    },
+    "@nx/angular:component": {
+      "style": "none",
+      "prefix": "km",
+      "changeDetection": "OnPush"
+    },
+    "@nx/angular:directive": {
+      "prefix": "km"
     }
+  },
+  "migrate": {
+    "agentic": false
   }
 }
