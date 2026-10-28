@@ -24,11 +24,11 @@ export const SITE = {
   } as Record<StoreId, string | null>,
   /**
    * Contact form → Edge Function `contact` of the app's Supabase project. Public by design: the publishable key only
-   * identifies the project; the function accepts requests from `CONTACT_ALLOWED_ORIGINS` only. Filled in task 4.
+   * identifies the project; the function accepts requests from `CONTACT_ALLOWED_ORIGINS` only.
    */
   contact: {
-    url: '',
-    publishableKey: '',
+    url: 'https://dmdlrsdhxakjyhuadbtc.supabase.co/functions/v1/contact',
+    publishableKey: 'sb_publishable_1ph7XR1jaFIGoPV7MCcArg_h5_HxFD3',
   },
   /** App screenshots for the home page gallery; empty — the gallery is hidden. */
   screenshots: [] as Screenshot[],
