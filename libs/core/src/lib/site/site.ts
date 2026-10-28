@@ -1,7 +1,16 @@
+import type { LocaleId } from '../locales/locales';
+
 export type StoreId = 'appStore' | 'googlePlay';
 
+export interface Screenshot {
+  /** File name without extension: `public/screenshots/{locale}/{name}.webp`. */
+  readonly name: string;
+  /** Locales that have their own file; the others fall back to English. */
+  readonly locales: LocaleId[];
+}
+
 /**
- * Brand, contacts and stores in one place.
+ * Brand, contacts, stores and screenshots in one place.
  */
 export const SITE = {
   name: 'Karmanto',
@@ -21,4 +30,6 @@ export const SITE = {
     url: '',
     publishableKey: '',
   },
+  /** App screenshots for the home page gallery; empty — the gallery is hidden. */
+  screenshots: [] as Screenshot[],
 } as const;

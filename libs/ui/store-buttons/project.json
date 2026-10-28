@@ -1,0 +1,10 @@
+{
+  "name": "ui/store-buttons",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/store-buttons/src",
+  "prefix": "km",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui/store-buttons --web",
+  "targets": {}
+}

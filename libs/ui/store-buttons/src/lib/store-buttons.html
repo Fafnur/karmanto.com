@@ -1,0 +1,25 @@
+@for (store of stores; track store.id) {
+  @if (store.url; as url) {
+    <a class="inline-block no-underline hover:no-underline" [href]="url" target="_blank" rel="noopener">
+      <img class="h-12 w-auto" [src]="'/badges/' + store.id + '-' + locale.id + '.svg'" [alt]="store.name" height="48" />
+    </a>
+  } @else {
+    <span
+      class="inline-flex h-12 items-center gap-3 rounded-full border border-outline bg-paper px-5 text-sm font-semibold text-ink-secondary"
+    >
+      <svg
+        class="h-5 w-5 text-primary"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        aria-hidden="true"
+      >
+        <rect x="7" y="2.5" width="10" height="19" rx="2.5" />
+        <path d="M11 18.5h2" />
+      </svg>
+      {{ store.soon }}
+    </span>
+  }
+}
