@@ -1,0 +1,10 @@
+{
+  "name": "ui/consent-banner",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/consent-banner/src",
+  "prefix": "km",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui/consent-banner --web",
+  "targets": {}
+}

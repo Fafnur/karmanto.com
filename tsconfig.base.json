@@ -33,7 +33,9 @@
       "@karmanto/ui/header": ["./libs/ui/header/src/index.ts"],
       "@karmanto/ui/footer": ["./libs/ui/footer/src/index.ts"],
       "@karmanto/legal/content": ["./libs/legal/content/src/index.ts"],
-      "@karmanto/ui/store-buttons": ["./libs/ui/store-buttons/src/index.ts"]
+      "@karmanto/ui/store-buttons": ["./libs/ui/store-buttons/src/index.ts"],
+      "@karmanto/analytics": ["./libs/analytics/src/index.ts"],
+      "@karmanto/ui/consent-banner": ["./libs/ui/consent-banner/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

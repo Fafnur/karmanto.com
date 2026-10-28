@@ -713,6 +713,51 @@
         <note priority="1" from="description">Explanation under the heading</note>
         <note priority="1" from="meaning">Not found page</note>
       </trans-unit>
+      <trans-unit id="3974586533387120080" datatype="html">
+        <source>Cookies and analytics</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+        <note priority="1" from="description">Heading</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="5174773323003219084" datatype="html">
+        <source> With your consent we use Google Analytics and Yandex Metrica to understand how the site is used. Nothing is loaded until you decide. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+        <note priority="1" from="description">Text</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="3000854258670054196" datatype="html">
+        <source>More about cookies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">15,19</context>
+        </context-group>
+        <note priority="1" from="description">Link to the cookies section of the privacy policy</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="3752501329506051288" datatype="html">
+        <source>Accept</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <note priority="1" from="description">Accept button</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="2172859727207965634" datatype="html">
+        <source>Decline</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">20,24</context>
+        </context-group>
+        <note priority="1" from="description">Decline button</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
       <trans-unit id="7416693212987066571" datatype="html">
         <source>Documents and support</source>
         <context-group purpose="location">
@@ -753,9 +798,18 @@
         <source>Delete account</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
-          <context context-type="linenumber">20,25</context>
+          <context context-type="linenumber">20,24</context>
         </context-group>
         <note priority="1" from="description">Link to the account deletion instructions</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="6395372126226006005" datatype="html">
+        <source> Cookie settings </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">31,35</context>
+        </context-group>
+        <note priority="1" from="description">Button that opens cookie consent settings</note>
         <note priority="1" from="meaning">Footer</note>
       </trans-unit>
       <trans-unit id="2006418583085660987" datatype="html">
@@ -820,7 +874,7 @@
         <source>Coming soon to the App Store</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/ui/store-buttons/src/lib/store-buttons.ts</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">31</context>
         </context-group>
         <note priority="1" from="description">Placeholder until the app is in the App Store</note>
         <note priority="1" from="meaning">Store buttons</note>
@@ -829,7 +883,7 @@
         <source>Coming soon to Google Play</source>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/ui/store-buttons/src/lib/store-buttons.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">37</context>
         </context-group>
         <note priority="1" from="description">Placeholder until the app is in Google Play</note>
         <note priority="1" from="meaning">Store buttons</note>

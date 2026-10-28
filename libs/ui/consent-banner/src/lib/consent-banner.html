@@ -1,0 +1,23 @@
+@if (consent.$bannerOpen()) {
+  <section
+    class="fixed inset-x-4 bottom-4 z-30 mx-auto max-w-xl rounded-block border border-outline bg-paper p-5 shadow-paper"
+    aria-labelledby="consent-title"
+  >
+    <h2 id="consent-title" class="text-base font-semibold" i18n="Cookie banner|Heading">Cookies and analytics</h2>
+    <p class="mt-2 text-sm text-ink-secondary" i18n="Cookie banner|Text">
+      With your consent we use Google Analytics and Yandex Metrica to understand how the site is used. Nothing is loaded until you decide.
+    </p>
+    <p class="mt-1 text-sm">
+      <a
+        [routerLink]="paths.privacy"
+        fragment="cookies-and-similar-technologies"
+        i18n="Cookie banner|Link to the cookies section of the privacy policy"
+        >More about cookies</a
+      >
+    </p>
+    <div class="mt-4 flex flex-col gap-3 sm:flex-row">
+      <button kmButton variant="secondary" type="button" (click)="onAccept()" i18n="Cookie banner|Accept button">Accept</button>
+      <button kmButton variant="secondary" type="button" (click)="onDecline()" i18n="Cookie banner|Decline button">Decline</button>
+    </div>
+  </section>
+}
