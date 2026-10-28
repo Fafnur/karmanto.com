@@ -1,2 +1,177 @@
 <h1 i18n="Contact page|Page heading">Contact Us</h1>
-<p i18n="Stub page|Placeholder text until the page is ready">This page is coming soon.</p>
+
+@switch ($result()) {
+  @case ('sent') {
+    <div class="mt-8 space-y-6 rounded-block border border-outline bg-paper p-6 md:p-8" role="status">
+      <h2 class="text-3xl" i18n="Contact form|Heading after a successful send">Thank you!</h2>
+      <p class="text-ink-secondary" i18n="Contact form|Text after a successful send">We'll reply to {{ $sentTo() }}.</p>
+      <button kmButton variant="secondary" type="button" (click)="onReset()" i18n="Contact form|Button to write one more message">
+        Send another message
+      </button>
+    </div>
+  }
+  @default {
+    <p class="mt-4 text-lg text-ink-secondary" i18n="Contact page|Intro under the heading">
+      Questions, ideas or problems with the app — we reply by email.
+    </p>
+
+    <form class="mt-8 space-y-6" [formRoot]="contactForm">
+      <div class="space-y-2">
+        <label class="block font-semibold" for="contact-name" i18n="Contact form|Label of the name field">Name</label>
+        <input
+          id="contact-name"
+          class="w-full rounded-button border border-outline bg-paper px-4 py-3 text-ink"
+          type="text"
+          autocomplete="name"
+          [formField]="contactForm.name"
+          [attr.aria-invalid]="contactForm.name().touched() && contactForm.name().invalid()"
+          [class.border-error]="contactForm.name().touched() && contactForm.name().invalid()"
+          aria-describedby="contact-name-error"
+        />
+        <p id="contact-name-error" class="text-sm text-error">
+          @if (contactForm.name().touched()) {
+            {{ contactForm.name().errors()[0]?.message }}
+          }
+        </p>
+      </div>
+
+      <div class="space-y-2">
+        <label class="block font-semibold" for="contact-email" i18n="Contact form|Label of the email field">Email</label>
+        <input
+          id="contact-email"
+          class="w-full rounded-button border border-outline bg-paper px-4 py-3 text-ink"
+          type="email"
+          autocomplete="email"
+          [formField]="contactForm.email"
+          [attr.aria-invalid]="contactForm.email().touched() && contactForm.email().invalid()"
+          [class.border-error]="contactForm.email().touched() && contactForm.email().invalid()"
+          aria-describedby="contact-email-error"
+        />
+        <p id="contact-email-error" class="text-sm text-error">
+          @if (contactForm.email().touched()) {
+            {{ contactForm.email().errors()[0]?.message }}
+          }
+        </p>
+      </div>
+
+      <div class="space-y-2">
+        <label class="block font-semibold" for="contact-telegram">
+          <span i18n="Contact form|Label of the Telegram username field">Telegram username</span>
+          <span class="ml-1 font-normal text-ink-muted" i18n="Contact form|Marks a field as optional">(optional)</span>
+        </label>
+        <input
+          id="contact-telegram"
+          class="w-full rounded-button border border-outline bg-paper px-4 py-3 text-ink"
+          type="text"
+          autocomplete="off"
+          placeholder="@username"
+          [formField]="contactForm.telegram"
+          [attr.aria-invalid]="contactForm.telegram().touched() && contactForm.telegram().invalid()"
+          [class.border-error]="contactForm.telegram().touched() && contactForm.telegram().invalid()"
+          aria-describedby="contact-telegram-error"
+        />
+        <p id="contact-telegram-error" class="text-sm text-error">
+          @if (contactForm.telegram().touched()) {
+            {{ contactForm.telegram().errors()[0]?.message }}
+          }
+        </p>
+      </div>
+
+      <div class="space-y-2">
+        <label class="block font-semibold" for="contact-topic" i18n="Contact form|Label of the topic select">Topic</label>
+        <select
+          id="contact-topic"
+          class="w-full rounded-button border border-outline bg-paper px-4 py-3 text-ink"
+          [formField]="contactForm.topic"
+        >
+          @for (topic of topics; track topic.value) {
+            <option [value]="topic.value">{{ topic.label }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="space-y-2">
+        <label class="block font-semibold" for="contact-message" i18n="Contact form|Label of the message field">Message</label>
+        <textarea
+          id="contact-message"
+          class="min-h-40 w-full rounded-button border border-outline bg-paper px-4 py-3 text-ink"
+          rows="6"
+          [formField]="contactForm.message"
+          [attr.aria-invalid]="contactForm.message().touched() && contactForm.message().invalid()"
+          [class.border-error]="contactForm.message().touched() && contactForm.message().invalid()"
+          aria-describedby="contact-message-error contact-message-count"
+        ></textarea>
+        <div class="flex justify-between gap-4 text-sm">
+          <p id="contact-message-error" class="text-error">
+            @if (contactForm.message().touched()) {
+              {{ contactForm.message().errors()[0]?.message }}
+            }
+          </p>
+          <p id="contact-message-count" class="shrink-0 text-ink-muted" [class.text-error]="$messageLength() > messageMax">
+            {{ $messageLength() }} / {{ messageMax }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Honeypot for bots: hidden from people and screen readers. -->
+      <div class="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
+        <label for="contact-website">Website</label>
+        <input id="contact-website" type="text" tabindex="-1" autocomplete="off" [formField]="contactForm.website" />
+      </div>
+
+      <div class="space-y-2">
+        <div class="flex items-start gap-3">
+          <input
+            id="contact-consent"
+            class="mt-1 h-5 w-5 shrink-0 accent-primary"
+            type="checkbox"
+            [formField]="contactForm.consent"
+            [attr.aria-invalid]="contactForm.consent().touched() && contactForm.consent().invalid()"
+            aria-describedby="contact-consent-error"
+          />
+          <div>
+            <label for="contact-consent" i18n="Contact form|Label of the consent checkbox"
+              >I agree to the processing of my personal data</label
+            >
+            <a
+              class="ml-1 underline"
+              [routerLink]="paths.consent"
+              target="_blank"
+              i18n="Contact form|Link to the consent document next to the checkbox"
+              >Read the consent</a
+            >
+          </div>
+        </div>
+        <p id="contact-consent-error" class="text-sm text-error">
+          @if (contactForm.consent().touched()) {
+            {{ contactForm.consent().errors()[0]?.message }}
+          }
+        </p>
+      </div>
+
+      @if ($result() === 'rate_limited') {
+        <p
+          class="rounded-button border border-error/60 bg-error/10 p-4"
+          role="alert"
+          i18n="Contact form|Error when too many messages were sent"
+        >
+          Too many messages. Please try again later.
+        </p>
+      } @else if ($result() === 'failed') {
+        <p class="rounded-button border border-error/60 bg-error/10 p-4" role="alert">
+          <span i18n="Contact form|Error when the message could not be sent">The message wasn't sent. Please write to us at</span>
+          <a [href]="'mailto:' + site.email">{{ site.email }}</a
+          >.
+        </p>
+      }
+
+      <button kmButton type="submit" [disabled]="contactForm().submitting()">
+        @if (contactForm().submitting()) {
+          <ng-container i18n="Contact form|Submit button while sending">Sending…</ng-container>
+        } @else {
+          <ng-container i18n="Contact form|Submit button">Send</ng-container>
+        }
+      </button>
+    </form>
+  }
+}

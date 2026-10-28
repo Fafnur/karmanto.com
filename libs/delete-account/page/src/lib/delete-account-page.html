@@ -1,2 +1,53 @@
-<h1 i18n="Delete account page|Page heading">Delete Account</h1>
-<p i18n="Stub page|Placeholder text until the page is ready">This page is coming soon.</p>
+<h1 i18n="Delete account page|Page heading: how to delete a Karmanto account">Delete Your Account</h1>
+<p class="mt-4 text-lg text-ink-secondary" i18n="Delete account page|Intro under the heading">
+  How to delete your Karmanto account and all your data in it.
+</p>
+
+<section class="mt-10 space-y-4" aria-labelledby="in-app">
+  <h2 id="in-app" class="text-3xl md:text-4xl" i18n="Delete account page|Section heading: deleting from the app">In the app</h2>
+  <ol class="list-decimal space-y-2 pl-6 text-ink-secondary marker:text-primary">
+    <li i18n="Delete account page|Step 1; «Settings» is the tab name in the app">Open Karmanto and go to Settings.</li>
+    <li i18n="Delete account page|Step 2; «Account» and «Delete account» must match the app">
+      In the Account section, tap Delete account.
+    </li>
+    <li i18n="Delete account page|Step 3">Confirm the deletion.</li>
+  </ol>
+  <p class="text-sm text-ink-muted" i18n="Delete account page|Note for users who signed in with Apple">
+    On iPhone and iPad, if you signed in with Apple, the app will then ask you to confirm with Apple: this disconnects the app from your
+    Apple ID.
+  </p>
+</section>
+
+<section class="mt-10 space-y-4" aria-labelledby="what">
+  <h2 id="what" class="text-3xl md:text-4xl" i18n="Delete account page|Section heading: what is deleted">What is deleted</h2>
+  <p class="text-ink-secondary" i18n="Delete account page|What deletion removes, as in the app's confirmation dialog">
+    Your account and all your words, lists and progress are deleted on all your devices, immediately and permanently. This can't be undone.
+  </p>
+  <p>
+    <a
+      [routerLink]="paths.privacy"
+      fragment="how-long-we-keep-data"
+      i18n="Delete account page|Link to the data retention section of the privacy policy"
+      >What else we keep and for how long — see the Privacy Policy</a
+    >
+  </p>
+</section>
+
+<section class="mt-12 space-y-4 rounded-block border border-outline bg-paper p-6 md:p-8" aria-labelledby="no-access">
+  <h2 id="no-access" class="text-3xl md:text-4xl" i18n="Delete account page|Section heading: no access to the app">
+    No access to the app?
+  </h2>
+  <p class="text-ink-secondary" i18n="Delete account page|How to request deletion without the app">
+    Send us a deletion request through the form, or write to {{ site.email }} from the email address you used to sign in.
+  </p>
+  <div class="flex flex-col gap-3 pt-2 sm:flex-row">
+    <a
+      kmButton
+      [routerLink]="paths.contact"
+      [queryParams]="{ topic: 'account_deletion' }"
+      i18n="Delete account page|Button to the contact form with the deletion topic"
+      >Request deletion</a
+    >
+    <a kmButton variant="secondary" [href]="mailto">{{ site.email }}</a>
+  </div>
+</section>
