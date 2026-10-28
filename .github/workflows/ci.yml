@@ -1,6 +1,5 @@
 name: CI
 
-# Checks only: deploy is a separate task once the domain and the server are ready (`docs/plan.md`).
 on:
   pull_request:
   push:
@@ -74,6 +73,14 @@ jobs:
         if: github.event_name == 'push'
         run: yarn nx run-many -t lint test build e2e
 
+      - name: Upload site
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v7
+        with:
+          name: site
+          path: dist/apps/site/browser
+          retention-days: 7
+
       - name: Upload Playwright report
         if: failure()
         uses: actions/upload-artifact@v7
@@ -81,3 +88,27 @@ jobs:
           name: playwright-report
           path: dist/.playwright
           retention-days: 7
+
+  # The exact build that passed the checks goes to our server (nginx, `deploy/nginx/karmanto.com.conf`).
+  deploy:
+    name: Deploy
+    if: github.event_name == 'push'
+    needs: checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: site
+          path: site
+
+      - name: Deploy via rsync
+        uses: burnett01/rsync-deployments@9.0.2
+        with:
+          switches: -avz --delete
+          path: site/
+          remote_path: ${{ secrets.DEPLOY_PATH }}
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_port: ${{ secrets.DEPLOY_PORT }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_SSH_KEY }}
