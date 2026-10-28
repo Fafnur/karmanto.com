@@ -1,0 +1,27 @@
+<div class="mx-auto flex h-44 w-40 flex-col gap-3 rounded-block border border-outline bg-background p-3">
+  <div class="relative flex flex-1 flex-col items-center justify-center gap-2 rounded-card border border-outline bg-paper shadow-paper">
+    <div class="h-2.5 w-16 rounded-full bg-ink/70"></div>
+    <div class="h-2 w-10 rounded-full bg-outline"></div>
+    @if ($mode() === 'review') {
+      <svg class="absolute right-2 top-2 h-4 w-4 text-know" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="m3.5 8.5 3 3 6-7" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    }
+  </div>
+  @switch ($mode()) {
+    @case ('writing') {
+      <div class="flex gap-2">
+        <div class="flex h-7 flex-1 items-center rounded-button border border-outline bg-paper px-2">
+          <div class="h-3.5 w-px bg-primary"></div>
+        </div>
+        <div class="h-7 w-9 rounded-button bg-primary"></div>
+      </div>
+    }
+    @default {
+      <div class="grid grid-cols-2 gap-2">
+        <div class="h-7 rounded-button border-[1.5px] border-again"></div>
+        <div class="h-7 rounded-button border-[1.5px] border-know"></div>
+      </div>
+    }
+  }
+</div>
