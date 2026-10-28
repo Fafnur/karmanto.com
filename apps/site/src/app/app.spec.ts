@@ -15,7 +15,7 @@ describe('App', () => {
 
   it('should render the home page', async () => {
     const harness = await RouterTestingHarness.create('/');
-    expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toContain('Karmanto');
+    expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toContain('Words that are always with you');
   });
 
   it('should render the route title on a legal page', async () => {

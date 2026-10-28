@@ -23,6 +23,8 @@ export const PATHS = {
 export const FRAGMENTS = {
   how: 'how',
   features: 'features',
+  /** The support FAQ answer about Google Sheets, linked from the import section of the home page. */
+  googleSheet: 'google-sheet',
 } as const;
 
 export type PathValues = (typeof PATHS)[keyof typeof PATHS];

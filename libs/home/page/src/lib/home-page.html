@@ -1,2 +1,154 @@
-<h1 i18n="Home page|Page heading: app name">Karmanto</h1>
-<p i18n="Home page|Subheading under the app name: the app tagline">Words that are always with you.</p>
+<!-- First screen -->
+<section class="grid items-center gap-12 pb-16 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-16 lg:pb-24 lg:pt-8">
+  <div class="space-y-6">
+    <p class="text-sm font-semibold uppercase tracking-widest text-primary" i18n="Home page|Eyebrow above the main heading">
+      Karmanto · flashcards for iOS and Android
+    </p>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl" i18n="Home page|Main heading">Words that are always with you</h1>
+    <p class="max-w-xl text-lg text-ink-secondary md:text-xl" i18n="Home page|Subheading under the main heading">
+      Like slips of paper with words you carry in your pocket — but with spaced repetition. Add a word, answer with two buttons, and
+      Karmanto decides when to show it again.
+    </p>
+    <km-store-buttons />
+  </div>
+
+  <km-study-card />
+</section>
+
+<!-- How it works -->
+<section class="py-16 lg:py-24" aria-labelledby="how">
+  <h2 [id]="fragments.how" class="text-center" i18n="Home page|Section heading">How it works</h2>
+  <ol class="mt-12 grid gap-6 md:grid-cols-3">
+    @for (step of steps; track step.title; let i = $index) {
+      <li class="rounded-block border border-outline bg-paper p-6 shadow-paper">
+        <span class="text-4xl font-bold text-primary">{{ i + 1 }}</span>
+        <h3 class="mt-2">{{ step.title }}</h3>
+        <p class="mt-2 text-ink-secondary">{{ step.text }}</p>
+      </li>
+    }
+  </ol>
+</section>
+
+<!-- Study modes -->
+<section class="py-16 lg:py-24" aria-labelledby="modes-heading">
+  <h2 id="modes-heading" class="text-center" i18n="Home page|Section heading">Three ways to study</h2>
+  <div class="mt-12 grid gap-6 md:grid-cols-3">
+    @for (mode of modes; track mode.mode) {
+      <article class="flex flex-col rounded-block border border-outline bg-paper p-6 shadow-paper">
+        <km-mode-preview [mode]="mode.mode" />
+        <h3 class="mt-6">{{ mode.title }}</h3>
+        <p class="mt-2 text-ink-secondary">{{ mode.text }}</p>
+      </article>
+    }
+  </div>
+</section>
+
+<!-- Import and offline -->
+<div class="grid gap-6 py-16 md:grid-cols-2 lg:py-24">
+  <section class="rounded-block border border-outline bg-paper p-6 shadow-paper md:p-8" aria-labelledby="import-heading">
+    <h2 id="import-heading" class="text-2xl md:text-3xl" i18n="Home page|Section heading">Bring your words with you</h2>
+    <p class="mt-4 text-ink-secondary" i18n="Home page|Import section text">
+      Paste a text, import a CSV or connect a Google Sheet and update it later with one tap. Lists exported from Quizlet work as they are.
+    </p>
+    <p class="mt-4">
+      <a [routerLink]="paths.support" [fragment]="fragments.googleSheet" i18n="Home page|Link to the support answer about Google Sheets"
+        >How to connect a Google Sheet</a
+      >
+    </p>
+  </section>
+  <section class="rounded-block border border-outline bg-paper p-6 shadow-paper md:p-8" aria-labelledby="offline-heading">
+    <h2 id="offline-heading" class="text-2xl md:text-3xl" i18n="Home page|Section heading">Offline and in sync</h2>
+    <p class="mt-4 text-ink-secondary" i18n="Home page|Offline section text">
+      Study on the subway without a signal. After sign-in your words are on all your devices. Deleted words wait in the trash for 30 days.
+    </p>
+  </section>
+</div>
+
+<!-- Languages -->
+<section class="py-16 lg:py-24" aria-labelledby="languages-heading">
+  <h2 id="languages-heading" class="text-center" i18n="Home page|Section heading with the number of languages to learn">
+    33 languages to learn
+  </h2>
+  <p class="mx-auto mt-4 max-w-xl text-center text-ink-secondary" i18n="Home page|Text under the languages heading">
+    And translations into 59 languages.
+  </p>
+  <ul class="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-2">
+    @for (language of languages; track language.code) {
+      <li class="rounded-full border border-outline bg-paper px-4 py-1.5" [lang]="language.code" [attr.dir]="language.dir">
+        {{ language.name }}
+      </li>
+    }
+  </ul>
+</section>
+
+<!-- Features -->
+<section class="py-16 lg:py-24" aria-labelledby="features">
+  <h2 [id]="fragments.features" class="text-center" i18n="Home page|Section heading">What makes it different</h2>
+  <ul class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    @for (feature of features; track feature.title) {
+      <li class="rounded-block border border-outline bg-paper p-6 shadow-paper">
+        <h3>{{ feature.title }}</h3>
+        <p class="mt-2 text-ink-secondary">{{ feature.text }}</p>
+      </li>
+    }
+  </ul>
+</section>
+
+<!-- Screenshots: hidden until files are listed in SITE.screenshots -->
+@if (screenshots.length) {
+  <section class="py-16 lg:py-24" aria-labelledby="screens-heading">
+    <h2 id="screens-heading" class="text-center" i18n="Home page|Section heading">Inside the app</h2>
+    <ul class="-mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 md:-mx-8 md:px-8">
+      @for (shot of screenshots; track shot.name) {
+        <li class="w-60 shrink-0 snap-center">
+          <img
+            class="rounded-block border border-outline"
+            [src]="'/screenshots/en/' + shot.name + '.webp'"
+            width="240"
+            height="520"
+            alt=""
+            loading="lazy"
+          />
+        </li>
+      }
+    </ul>
+  </section>
+}
+
+<!-- Short FAQ -->
+<section class="mx-auto max-w-3xl py-16 lg:py-24" aria-labelledby="faq-heading">
+  <h2 id="faq-heading" class="text-center" i18n="Home page|Section heading">Questions</h2>
+  <div class="mt-10 divide-y divide-outline border-y border-outline">
+    @for (item of questions; track item.title) {
+      <details class="group">
+        <summary
+          class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold [&::-webkit-details-marker]:hidden"
+        >
+          <span>{{ item.title }}</span>
+          <svg
+            class="h-5 w-5 shrink-0 text-primary transition-transform group-open:rotate-45"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M10 4a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H5a1 1 0 1 1 0-2h4V5a1 1 0 0 1 1-1Z" />
+          </svg>
+        </summary>
+        <p class="pb-5 text-ink-secondary">{{ item.text }}</p>
+      </details>
+    }
+  </div>
+  <p class="mt-6 text-center">
+    <a [routerLink]="paths.support" i18n="Home page|Link to the support page under the short FAQ">All questions and support</a>
+  </p>
+</section>
+
+<!-- Final call -->
+<section
+  class="rounded-block border border-outline bg-paper px-6 py-12 text-center shadow-paper md:px-12 md:py-16"
+  aria-labelledby="cta-heading"
+>
+  <h2 id="cta-heading" i18n="Home page|Final call heading">Your words, always in your pocket</h2>
+  <p class="mx-auto mt-4 max-w-xl text-ink-secondary" i18n="Home page|Final call text">Karmanto is coming to iPhone and Android.</p>
+  <km-store-buttons class="mt-8 justify-center" />
+</section>

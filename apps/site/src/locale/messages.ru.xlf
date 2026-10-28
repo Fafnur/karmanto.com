@@ -160,26 +160,6 @@
         <note priority="1" from="description">Placeholder text until the page is ready</note>
         <note priority="1" from="meaning">Stub page</note>
       </trans-unit>
-      <trans-unit id="6160972072275593648" datatype="html">
-        <source>Karmanto</source>
-        <target>Karmanto</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
-          <context context-type="linenumber">1,2</context>
-        </context-group>
-        <note priority="1" from="description">Page heading: app name</note>
-        <note priority="1" from="meaning">Home page</note>
-      </trans-unit>
-      <trans-unit id="5555603115919921089" datatype="html">
-        <source>Words that are always with you.</source>
-        <target>Слова, которые всегда с собой.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
-          <context context-type="linenumber">2,3</context>
-        </context-group>
-        <note priority="1" from="description">Subheading under the app name: the app tagline</note>
-        <note priority="1" from="meaning">Home page</note>
-      </trans-unit>
       <trans-unit id="838932932714103261" datatype="html">
         <source>Updated:</source>
         <target>Обновлено:</target>
@@ -381,6 +361,606 @@
         </context-group>
         <note priority="1" from="description">Dark theme, as in the app settings</note>
         <note priority="1" from="meaning">Theme menu</note>
+      </trans-unit>
+      <trans-unit id="4407982881785938986" datatype="html">
+        <source> Karmanto · flashcards for iOS and Android </source>
+        <target> Karmanto · карточки для iOS и Android </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+        <note priority="1" from="description">Eyebrow above the main heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3337529954216734260" datatype="html">
+        <source>Words that are always with you</source>
+        <target>Слова, которые всегда с собой</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+        <note priority="1" from="description">Main heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="780672166905295840" datatype="html">
+        <source> Like slips of paper with words you carry in your pocket — but with spaced repetition. Add a word, answer with two buttons, and Karmanto decides when to show it again. </source>
+        <target> Как бумажки со словами, которые носишь в кармане, — но с интервальным повторением. Добавьте слово, отвечайте двумя кнопками, а Karmanto сам решит, когда показать его снова. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">9,15</context>
+        </context-group>
+        <note priority="1" from="description">Subheading under the main heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="422836231871519603" datatype="html">
+        <source>How it works</source>
+        <target>Как это работает</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3803602021465010302" datatype="html">
+        <source>Three ways to study</source>
+        <target>Три способа учить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5115488661368747700" datatype="html">
+        <source>Bring your words with you</source>
+        <target>Возьмите свои слова с собой</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5486395089088932646" datatype="html">
+        <source> Paste a text, import a CSV or connect a Google Sheet and update it later with one tap. Lists exported from Quizlet work as they are. </source>
+        <target> Вставьте текст, импортируйте CSV или подключите Google Таблицу и обновляйте её потом одним нажатием. Списки, выгруженные из Quizlet, подходят как есть. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">51,54</context>
+        </context-group>
+        <note priority="1" from="description">Import section text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6832364169791980892" datatype="html">
+        <source>How to connect a Google Sheet</source>
+        <target>Как подключить Google Таблицу</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">55,59</context>
+        </context-group>
+        <note priority="1" from="description">Link to the support answer about Google Sheets</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="7807312065346857216" datatype="html">
+        <source>Offline and in sync</source>
+        <target>Без интернета и на всех устройствах</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4708170439344886501" datatype="html">
+        <source> Study on the subway without a signal. After sign-in your words are on all your devices. Deleted words wait in the trash for 30 days. </source>
+        <target> Учите в метро без связи. После входа ваши слова — на всех ваших устройствах. Удалённые слова 30 дней ждут в корзине. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">62,67</context>
+        </context-group>
+        <note priority="1" from="description">Offline section text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="145405928043292357" datatype="html">
+        <source> 33 languages to learn </source>
+        <target> 33 языка для изучения </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+        <note priority="1" from="description">Section heading with the number of languages to learn</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="8594418416587224870" datatype="html">
+        <source> And translations into 59 languages. </source>
+        <target> И перевод на 59 языков. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">73,75</context>
+        </context-group>
+        <note priority="1" from="description">Text under the languages heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="336734778938873393" datatype="html">
+        <source>What makes it different</source>
+        <target>Чем отличается</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4379191226021262085" datatype="html">
+        <source>Inside the app</source>
+        <target>Внутри приложения</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6644760913968706550" datatype="html">
+        <source>Questions</source>
+        <target>Вопросы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">120,121</context>
+        </context-group>
+        <note priority="1" from="description">Section heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6909647173103904098" datatype="html">
+        <source>All questions and support</source>
+        <target>Все вопросы и поддержка</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">142,148</context>
+        </context-group>
+        <note priority="1" from="description">Link to the support page under the short FAQ</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="8420552197221991763" datatype="html">
+        <source>Your words, always in your pocket</source>
+        <target>Ваши слова всегда в кармане</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">151,152</context>
+        </context-group>
+        <note priority="1" from="description">Final call heading</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3771187587013533023" datatype="html">
+        <source>Karmanto is coming to iPhone and Android.</source>
+        <target>Karmanto скоро появится на iPhone и Android.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.html</context>
+          <context context-type="linenumber">152,153</context>
+        </context-group>
+        <note priority="1" from="description">Final call text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2551900467774982077" datatype="html">
+        <source>Add a word</source>
+        <target>Добавьте слово</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 1 title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4214015812779385814" datatype="html">
+        <source>With a translation, a part of speech, a transcription and an example.</source>
+        <target>С переводом, частью речи, транскрипцией и примером.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 1 text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2759390945094976449" datatype="html">
+        <source>Answer with two buttons</source>
+        <target>Отвечайте двумя кнопками</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 2 title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="7949968028174790160" datatype="html">
+        <source>“I know” or “Don&apos;t know”. The app decides when the word comes back.</source>
+        <target>«Знаю» или «Не знаю». Когда слово вернётся, решает приложение.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 2 text; I know and Don&apos;t know are answer buttons in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="1250457071463951842" datatype="html">
+        <source>Learned it — mark it</source>
+        <target>Выучили — отметьте</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 3 title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2436216573981352885" datatype="html">
+        <source>Forgot it later? One tap brings it back to study.</source>
+        <target>Потом забыли? Одно нажатие — и слово снова в изучении.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">How it works, step 3 text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="314208536587034278" datatype="html">
+        <source>Study</source>
+        <target>Изучение</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">Name of the main study mode in the app</note>
+        <note priority="1" from="meaning">Study mode</note>
+      </trans-unit>
+      <trans-unit id="1615084375626466717" datatype="html">
+        <source>New words and words that are due today, in short sessions.</source>
+        <target>Новые слова и те, что пора повторить сегодня, — короткими сессиями.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <note priority="1" from="description">Description of the Study mode</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5484372772923560838" datatype="html">
+        <source>Review learned</source>
+        <target>Повторение выученного</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Name of the mode that checks learned words in the app</note>
+        <note priority="1" from="meaning">Study mode</note>
+      </trans-unit>
+      <trans-unit id="3380175753089717762" datatype="html">
+        <source>Learned words come back now and then for a check. “Don&apos;t know” — and the word goes back to study.</source>
+        <target>Выученные слова иногда возвращаются на проверку. «Не знаю» — и слово снова в изучении.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Description of the Review learned mode; Don&apos;t know is an answer button in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5914606329662683002" datatype="html">
+        <source>Writing</source>
+        <target>Письмо</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description">Name of the writing mode in the app</note>
+        <note priority="1" from="meaning">Study mode</note>
+      </trans-unit>
+      <trans-unit id="6391091834817755602" datatype="html">
+        <source>See the translation, type the word and check your spelling.</source>
+        <target>Видите перевод, пишете слово и проверяете написание.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Description of the Writing mode</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5534886030823370067" datatype="html">
+        <source>Two answers instead of four grades</source>
+        <target>Два ответа вместо четырёх оценок</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <note priority="1" from="description">Feature title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="439997451483401312" datatype="html">
+        <source>No need to rate how well you remembered: “I know” or “Don&apos;t know” is enough. The schedule is the app&apos;s job.</source>
+        <target>Не нужно оценивать, насколько хорошо вы вспомнили: хватит «Знаю» или «Не знаю». Расписание — забота приложения.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <note priority="1" from="description">Feature text; I know and Don&apos;t know are answer buttons in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2832627611753814793" datatype="html">
+        <source>“Learned” is a status, not a list</source>
+        <target>«Выучено» — статус, а не список</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <note priority="1" from="description">Feature title; Learned is a word status in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5136167974531118571" datatype="html">
+        <source>A learned word stays in its list. Forgot it later? Bring it back to study in one tap.</source>
+        <target>Выученное слово остаётся в своём списке. Потом забыли? Верните его в изучение одним нажатием.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <note priority="1" from="description">Feature text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3842232464867265985" datatype="html">
+        <source>Study only verbs</source>
+        <target>Учите только глаголы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description">Feature title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="383339135765227721" datatype="html">
+        <source>Filter words by part of speech, or pause a list for a while without deleting it.</source>
+        <target>Фильтруйте слова по части речи или поставьте список на паузу, не удаляя его.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <note priority="1" from="description">Feature text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5046042231489826575" datatype="html">
+        <source>Reminders you can answer</source>
+        <target>Напоминания, на которые можно ответить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <note priority="1" from="description">Feature title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6663591013468328763" datatype="html">
+        <source>A word and the answer buttons right in the notification. Reminders stay off until you turn them on.</source>
+        <target>Слово и кнопки ответа прямо в уведомлении. Напоминания выключены, пока вы их не включите.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <note priority="1" from="description">Feature text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3391380878701142449" datatype="html">
+        <source>Hear it, look it up</source>
+        <target>Послушать и проверить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <note priority="1" from="description">Feature title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="1148005772494623379" datatype="html">
+        <source>Your phone&apos;s voice reads words aloud, and translations work offline.</source>
+        <target>Голос телефона читает слова вслух, а перевод работает без интернета.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+        <note priority="1" from="description">Feature text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="7732514265051432465" datatype="html">
+        <source>Make it yours</source>
+        <target>Настройте под себя</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <note priority="1" from="description">Feature title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="4354244013050134971" datatype="html">
+        <source>English, Russian or Spanish interface, light and dark themes, sign in with Google or Apple.</source>
+        <target>Интерфейс на английском, русском или испанском, светлая и тёмная тема, вход через Google или Apple.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+        <note priority="1" from="description">Feature text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2942572827438192107" datatype="html">
+        <source>Does Karmanto work without the internet?</source>
+        <target>Karmanto работает без интернета?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="2822293697570552233" datatype="html">
+        <source>Yes. You can add words and study without a connection: everything is saved on your phone and syncs when you are back online.</source>
+        <target>Да. Добавлять слова и учить можно без связи: всё сохраняется на телефоне и синхронизируется, когда сеть вернётся.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+        <note priority="1" from="description">Answer about offline use</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="957063322577289433" datatype="html">
+        <source>Why do I need to sign in?</source>
+        <target>Зачем нужен вход?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="1422086016752587782" datatype="html">
+        <source>Your words and progress are stored in your account, so they are on all your devices and are not lost when you change or reinstall your phone. You can sign in with Google or Apple.</source>
+        <target>Ваши слова и прогресс хранятся в аккаунте: они есть на всех ваших устройствах и не потеряются, если вы смените или переустановите телефон. Войти можно через Google или Apple.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <note priority="1" from="description">Answer about sign-in</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="5780844062149490720" datatype="html">
+        <source>Can I move my words from Quizlet?</source>
+        <target>Можно перенести слова из Quizlet?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="2045152219558495897" datatype="html">
+        <source>Yes. Export a set from Quizlet and paste the text into Karmanto: the Quizlet format is read as is. You can also import a CSV file or connect a Google Sheet.</source>
+        <target>Да. Экспортируйте набор из Quizlet и вставьте текст в Karmanto: формат Quizlet читается как есть. Ещё можно импортировать CSV-файл или подключить Google Таблицу.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <note priority="1" from="description">Answer about moving words from Quizlet</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="7608518579470565382" datatype="html">
+        <source>When will a word come back?</source>
+        <target>Когда слово вернётся?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="5074560712402596517" datatype="html">
+        <source>It depends on your answers. After “I know” the word comes back later each time, after “Don&apos;t know” — soon. Words you know well wait for weeks and months.</source>
+        <target>Зависит от ваших ответов. После «Знаю» слово каждый раз возвращается позже, после «Не знаю» — скоро. Хорошо знакомые слова ждут неделями и месяцами.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/home-page.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <note priority="1" from="description">Answer about spaced repetition; I know and Don&apos;t know are answer buttons in the app</note>
+        <note priority="1" from="meaning">Support FAQ</note>
+      </trans-unit>
+      <trans-unit id="8517423239966169" datatype="html">
+        <source>noun</source>
+        <target>существительное</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/study-card/decks.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Label on a word card, as in the app</note>
+        <note priority="1" from="meaning">Part of speech</note>
+      </trans-unit>
+      <trans-unit id="4436497010896547496" datatype="html">
+        <source>verb</source>
+        <target>глагол</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/study-card/decks.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Label on a word card, as in the app</note>
+        <note priority="1" from="meaning">Part of speech</note>
+      </trans-unit>
+      <trans-unit id="635871185482892086" datatype="html">
+        <source>adverb</source>
+        <target>наречие</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/study-card/decks.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Label on a word card, as in the app</note>
+        <note priority="1" from="meaning">Part of speech</note>
+      </trans-unit>
+      <trans-unit id="8003944342094786710" datatype="html">
+        <source>phrase</source>
+        <target>фраза</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/study-card/decks.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Label on a word card, as in the app</note>
+        <note priority="1" from="meaning">Part of speech</note>
+      </trans-unit>
+      <trans-unit id="107427038894329400" datatype="html">
+        <source>Study</source>
+        <target>Учёба</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/study-card/study-card.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">Phone demo: screen title, the Study tab of the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="8227596299404331084" datatype="html">
+        <source>Tap to flip</source>
+        <target>Нажмите, чтобы перевернуть</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/study-card/study-card.html</context>
+          <context context-type="linenumber">26,30</context>
+        </context-group>
+        <note priority="1" from="description">Phone demo: hint on the card, as in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="3688725868480044014" datatype="html">
+        <source> Don&apos;t know </source>
+        <target> Не знаю </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/study-card/study-card.html</context>
+          <context context-type="linenumber">50,54</context>
+        </context-group>
+        <note priority="1" from="description">Phone demo: answer button, as in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="2178090049943457941" datatype="html">
+        <source> I know </source>
+        <target> Знаю </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/home/page/src/lib/study-card/study-card.html</context>
+          <context context-type="linenumber">58,62</context>
+        </context-group>
+        <note priority="1" from="description">Phone demo: answer button, as in the app</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5248760516300986425" datatype="html">
+        <source>Coming soon to the App Store</source>
+        <target>Скоро в App Store</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/store-buttons/src/lib/store-buttons.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder until the app is in the App Store</note>
+        <note priority="1" from="meaning">Store buttons</note>
+      </trans-unit>
+      <trans-unit id="7945430791195849972" datatype="html">
+        <source>Coming soon to Google Play</source>
+        <target>Скоро в Google Play</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/store-buttons/src/lib/store-buttons.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Placeholder until the app is in Google Play</note>
+        <note priority="1" from="meaning">Store buttons</note>
       </trans-unit>
     </body>
   </file>
