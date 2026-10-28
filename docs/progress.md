@@ -8,7 +8,10 @@
       `LocalStorage`, адреса со слешем), `404.html`, Tailwind 3.4 без токенов, полифилы core-js. Контрактный e2e
       (9 адресов приложения, `lang` главных, 404) на трёх разрешениях. CI — только проверки. `CLAUDE.md`, скиллы
       `angular-developer`, `update-vendors`, `update-i18n`, заготовка `README.md`.
-- [ ] **Деплой** — ждёт домен и сервер (этап 0).
+- [x] **Деплой** — 2026-10-28. Job `deploy` (rsync), `deploy/nginx/karmanto.com.conf` (301 для `www.*` и
+      `karmanto.ru`), `docs/hosting.md`. DNS у reg.ru и почта ImprovMX (`support@karmanto.com`) — владелец; на сервере
+      папка, ключ `karmanto-deploy`, сертификат на четыре имени (до 2027-01-26, `certbot.timer`), конфиг; секреты
+      `DEPLOY_*`. Сайт открывается на `https://karmanto.com`, остальные имена — 301.
 - [x] **2. Дизайн и оболочка** — 2026-10-27. Палитра «Песочная» (светлая и тёмная, по умолчанию — системная, без
       вспышки), Noto Sans variable (5 подмножеств, preload по локали), радиусы и `shadow-paper`, кнопки
       `@karmanto/ui/buttons`, шапка (иконка, вордмарк, навигация, мобильное меню, меню темы и языков на CDK), футер,
