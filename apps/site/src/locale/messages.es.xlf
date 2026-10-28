@@ -962,6 +962,66 @@
         <note priority="1" from="description">Placeholder until the app is in Google Play</note>
         <note priority="1" from="meaning">Store buttons</note>
       </trans-unit>
+      <trans-unit id="3974586533387120080" datatype="html">
+        <source>Cookies and analytics</source>
+        <target>Cookies y analítica</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+        <note priority="1" from="description">Heading</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="5174773323003219084" datatype="html">
+        <source> With your consent we use Google Analytics and Yandex Metrica to understand how the site is used. Nothing is loaded until you decide. </source>
+        <target> Con tu consentimiento usamos Google Analytics y Yandex Metrica para entender cómo se usa el sitio. No se carga nada hasta que decidas. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+        <note priority="1" from="description">Text</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="3000854258670054196" datatype="html">
+        <source>More about cookies</source>
+        <target>Más sobre las cookies</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">15,19</context>
+        </context-group>
+        <note priority="1" from="description">Link to the cookies section of the privacy policy</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="3752501329506051288" datatype="html">
+        <source>Accept</source>
+        <target>Aceptar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <note priority="1" from="description">Accept button</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="2172859727207965634" datatype="html">
+        <source>Decline</source>
+        <target>Rechazar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/consent-banner/src/lib/consent-banner.html</context>
+          <context context-type="linenumber">20,24</context>
+        </context-group>
+        <note priority="1" from="description">Decline button</note>
+        <note priority="1" from="meaning">Cookie banner</note>
+      </trans-unit>
+      <trans-unit id="6395372126226006005" datatype="html">
+        <source> Cookie settings </source>
+        <target> Configuración de cookies </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/ui/footer/src/lib/footer.html</context>
+          <context context-type="linenumber">31,35</context>
+        </context-group>
+        <note priority="1" from="description">Button that opens cookie consent settings</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
     </body>
   </file>
 </xliff>

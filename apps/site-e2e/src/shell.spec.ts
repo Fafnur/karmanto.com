@@ -47,6 +47,8 @@ test.describe('language menu', () => {
 
   test('works from the keyboard and closes on Escape', async ({ page }) => {
     await page.goto('/terms/');
+    // A key press before hydration is not replayed, unlike a click.
+    await waitForHydration(page);
     const button = page.getByRole('button', { name: 'Choose language' });
 
     await button.focus();

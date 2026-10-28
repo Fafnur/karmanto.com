@@ -1,6 +1,6 @@
 @for (store of stores; track store.id) {
   @if (store.url; as url) {
-    <a class="inline-block no-underline hover:no-underline" [href]="url" target="_blank" rel="noopener">
+    <a class="inline-block no-underline hover:no-underline" [href]="url" target="_blank" rel="noopener" (click)="onStoreClick(store.id)">
       <img class="h-12 w-auto" [src]="'/badges/' + store.id + '-' + locale.id + '.svg'" [alt]="store.name" height="48" />
     </a>
   } @else {

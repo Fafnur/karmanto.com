@@ -1,5 +1,6 @@
 import { Component, inject, LOCALE_ID } from '@angular/core';
 
+import { AnalyticsService } from '@karmanto/analytics';
 import { getLocale, SITE, StoreId } from '@karmanto/core';
 
 interface Store {
@@ -19,6 +20,7 @@ interface Store {
   host: { class: 'flex flex-col gap-3 sm:flex-row' },
 })
 export class StoreButtons {
+  private readonly analytics = inject(AnalyticsService);
   protected readonly locale = getLocale(inject(LOCALE_ID));
 
   protected readonly stores: Store[] = [
@@ -35,4 +37,8 @@ export class StoreButtons {
       soon: $localize`:Store buttons|Placeholder until the app is in Google Play:Coming soon to Google Play`,
     },
   ];
+
+  onStoreClick(store: StoreId): void {
+    this.analytics.event('store_click', { platform: store === 'appStore' ? 'ios' : 'android' });
+  }
 }

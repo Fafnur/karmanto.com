@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+import { ConsentService } from '@karmanto/analytics';
 import { PATHS, SITE } from '@karmanto/core';
 
 /**
- * Site footer: documents, support, account deletion, contacts. «Cookie settings» comes with analytics (task 5).
+ * Site footer: documents, support, account deletion, cookie settings (when counters are configured), contacts.
  */
 @Component({
   selector: 'km-footer',
@@ -16,4 +17,9 @@ export class Footer {
   protected readonly site = SITE;
   protected readonly paths = PATHS;
   protected readonly year = new Date().getFullYear();
+  protected readonly consent = inject(ConsentService);
+
+  onCookieSettings(): void {
+    this.consent.open();
+  }
 }
