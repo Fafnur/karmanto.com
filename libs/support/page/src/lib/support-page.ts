@@ -45,7 +45,7 @@ export class SupportPage {
         },
         {
           question: $localize`:Support FAQ|Question; Inbox is a list name in the app:How do I add a word, and what is Inbox?`,
-          answer: $localize`:Support FAQ|Answer about adding words; Inbox and Paste a list must match the app:Add a word with a translation and, if you like, a part of speech, a transcription, an example and a note. Inbox is the list for words you add on the go: every language has one, and you can sort its words into your own lists later. To add many words at once, use Paste a list.`,
+          answer: $localize`:Support FAQ|Answer about adding words; Inbox, Lists, Import and export and Paste text must match the app:Add a word with a translation and, if you like, a part of speech, a transcription, an example, a note and a picture. Inbox is the list for words you add on the go: every language has one, and you can sort its words into your own lists later. To add many words at once, open Import and export on the Lists tab and choose Paste text.`,
         },
         {
           question: $localize`:Support FAQ|Question:Why do I need to sign in?`,
@@ -90,7 +90,7 @@ export class SupportPage {
         {
           id: FRAGMENTS.googleSheet,
           question: $localize`:Support FAQ|Question:How do I connect a Google Sheet?`,
-          answer: $localize`:Support FAQ|Answer about Google Sheets:In the sheet's sharing settings, allow access to anyone with the link. Put words in column A and translations in column B, then paste the link to the sheet into the app. The list remembers the sheet: updating it from the sheet adds only new rows and doesn't change words you have edited in the app.`,
+          answer: $localize`:Support FAQ|Answer about Google Sheets; Share, General access, Anyone with the link are Google Sheets menus, Update from the sheet is a button in the app:In the sheet, open Share → General access → “Anyone with the link”. Put words in column A, translations in column B and, if you like, a part of speech in C and an example in D — or name the columns in the first row. Then paste the link to the sheet into the app. The list remembers the sheet: “Update from the sheet” adds only new rows and doesn't change words already added. A word deleted in the app comes back on update, so delete it in the sheet too.`,
         },
         {
           question: $localize`:Support FAQ|Question:What happens when I pause a list?`,
@@ -98,7 +98,7 @@ export class SupportPage {
         },
         {
           question: $localize`:Support FAQ|Question:Where do deleted words go?`,
-          answer: $localize`:Support FAQ|Answer about the trash; Trash is a name in the app:To Trash. Deleted words and lists wait there for 30 days, and you can restore them with all their progress. After 30 days they are deleted for good.`,
+          answer: $localize`:Support FAQ|Answer about the trash; Trash is a name in the app:To Trash. Deleted words, lists and languages wait there for 30 days, and you can restore them with all their progress. After 30 days they are deleted for good.`,
         },
       ],
     },
@@ -112,7 +112,7 @@ export class SupportPage {
         },
         {
           question: $localize`:Support FAQ|Question:How does the offline dictionary work?`,
-          answer: $localize`:Support FAQ|Answer about the offline dictionary:When you add a word, the app can suggest a translation, even without the internet. Download the dictionary for your language pair once in the app settings: it takes some space on your phone.`,
+          answer: $localize`:Support FAQ|Answer about the offline dictionary; Settings → Offline dictionary must match the app:When you add a word, the app can suggest a translation, even without the internet. Download the dictionary for your language pair once in Settings → Offline dictionary: it takes about 30 MB per language. Google Translate does the translation right on your phone: one option, sometimes off.`,
         },
         {
           question: $localize`:Support FAQ|Question:How do I turn on reminders?`,
@@ -120,7 +120,7 @@ export class SupportPage {
         },
         {
           question: $localize`:Support FAQ|Question:How do I change the app language or theme?`,
-          answer: $localize`:Support FAQ|Answer; Settings, Language and Theme with their options must match the app:Open Settings. In Language, choose System, English, Russian or Spanish; in Theme — System, Light or Dark.`,
+          answer: $localize`:Support FAQ|Answer; Settings, Language and Theme with their options must match the app:Open Settings. In Language, choose System, English, Русский or Español; in Theme — System, Light or Dark.`,
         },
       ],
     },
