@@ -40,3 +40,24 @@
       `SITE.screenshots`. README синхронизирован. e2e `home`. **Тексты — черновик, вычитка владельцем, когда будет
       финальная версия приложения.** Lighthouse на мобильном не замерялся (будет в задаче 7).
 - [ ] **7. SEO, качество и выпуск**
+  - [x] SEO и качество — 2026-10-30. `sitemap.xml` (21 адрес с hreflang) и `robots.txt` из пререндеренного HTML;
+        e2e `quality`: axe на всех страницах трёх локалей в обеих темах на трёх разрешениях, все внутренние ссылки,
+        sitemap. Lighthouse на мобильном (прод): Performance 99–100, Accessibility 100.
+  - [ ] Сверка текстов с приложением, этапы 1–6 — отдельным PR.
+  - [ ] Сверка перед выпуском: напоминания (8.1), сток и нейроозвучка (7.2, 7.3), Firebase; убрать то, что не вошло в v1.
+
+**Перед выпуском** (владелец):
+
+- [ ] Документы вычитаны владельцем и юристом; даты `updated` актуальны.
+- [ ] Обещания политики выполняются в приложении (корзина 30 дней, удаление аккаунта с файлами Storage, своё фото
+      не уходит в облако, хранение аналитики сайта 14 месяцев).
+- [ ] Анкеты App Store Privacy и Google Data Safety — в соответствии с политикой; возраст 16+, без Families.
+- [x] ID GA4 и Метрики в production; данные приходят только после согласия (e2e `analytics`).
+- [ ] В Метрике и GA4 — цели `store_click`, `contact_submit`.
+- [x] Функция `contact` выкачена, `CONTACT_ALLOWED_ORIGINS=https://karmanto.com`; сообщение с прода доходит до
+      Telegram (задача 9.6 приложения).
+- [ ] Сайт в Google Search Console и Яндекс Вебмастере, отправлен `https://karmanto.com/sitemap.xml`.
+- [ ] Google OAuth consent screen: главная `https://karmanto.com/`, политика `https://karmanto.com/privacy/`,
+      условия `https://karmanto.com/terms/`.
+- [ ] App Store Connect: Privacy Policy URL и Support URL по локалям; Google Play: политика и
+      `https://karmanto.com/delete-account/`.
