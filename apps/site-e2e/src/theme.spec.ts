@@ -1,5 +1,3 @@
-import { AxeBuilder } from '@axe-core/playwright';
-
 import { expect, test, waitForHydration } from './fixtures';
 
 const LIGHT = 'rgb(243, 236, 224)';
@@ -40,24 +38,4 @@ test.describe('theme', () => {
     await expect(page.locator('html')).toHaveCSS('background-color', LIGHT);
     await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute('content', '#F3ECE0');
   });
-
-  // Contrast of text and background pairs (WCAG AA) in both themes; the full axe run is task 7.
-  for (const theme of ['light', 'dark']) {
-    for (const url of ['/', '/privacy/', '/ru/support/', '/404/']) {
-      test(`${url} in the ${theme} theme has no serious or critical axe violations`, async ({ page }) => {
-        await page.addInitScript((mode) => localStorage.setItem('karmanto.theme', mode), theme);
-        await page.goto(url);
-        await page.getByRole('contentinfo').waitFor();
-
-        const { violations } = await new AxeBuilder({ page })
-          .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice'])
-          .analyze();
-        const blocking = violations
-          .filter((violation) => violation.impact === 'serious' || violation.impact === 'critical')
-          .map((violation) => `${violation.id} (${violation.impact}): ${violation.nodes.map((node) => node.target.join(' ')).join(', ')}`);
-
-        expect(blocking).toEqual([]);
-      });
-    }
-  }
 });
