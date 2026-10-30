@@ -103,7 +103,7 @@ We do not use the advertising identifier, do not show ads and do not use this da
 
 If you click “Accept” in the cookie banner on karmanto.com, we use Google Analytics and Yandex Metrica to understand
 how the website is used: pages visited, referring site, approximate location (city or country), device and browser
-type, and clicks on app store links. If you click “Reject” or do nothing, these services are not loaded at all.
+type, and clicks on app store links. If you click “Decline” or do nothing, these services are not loaded at all.
 Session recording (Yandex Metrica Webvisor) is turned off.
 
 ### Data stored only on your device
