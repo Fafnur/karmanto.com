@@ -40,7 +40,7 @@ So that your words are available on all your devices, we store in our database w
 - words: the word itself, the translation, part of speech, transcription, an example and a note;
 - learning progress: the status (“Learned” or not), the review schedule and a log of your “I know” / “Don't know”
   answers with the date, time and study mode;
-- deleted words and lists while they are in the trash.
+- deleted languages, lists and words while they are in the trash.
 
 We need this data to show your words, schedule reviews and sync your devices.
 
@@ -51,8 +51,8 @@ anything that identifies you. The service does not need it.
 
 Text and CSV files that you import words from are processed on your device — the files themselves are not sent to us;
 we store only the words you add. If you connect a Google Sheet, the app downloads it from Google using the link you
-provided (the sheet must be accessible via the link), and we store the link with the list so that the “Refresh from
-sheet” button works.
+provided (the sheet must be accessible via the link), and we store the link with the list so that the “Update from
+the sheet” button works.
 
 ### Features available to some users
 
@@ -187,7 +187,7 @@ Standard Contractual Clauses or the EU–U.S. Data Privacy Framework.
 ## How long we keep data
 
 - **Account, words and progress** — while your account exists.
-- **Trash** — deleted words and lists stay in the trash for 30 days and are then deleted from our database together
+- **Trash** — deleted languages, lists and words stay in the trash for 30 days and are then deleted from our database together
   with their progress and files. Words you delete from the trash permanently are deleted during the next daily
   cleanup.
 - **When you delete your account** — your account and all your languages, lists, words, progress and files in cloud

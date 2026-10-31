@@ -42,7 +42,7 @@ aplicación:
 - las palabras: la palabra, su traducción, la categoría gramatical, la transcripción, un ejemplo y una nota;
 - tu progreso: el estado («Aprendida» o no), el calendario de repasos y el registro de respuestas «La sé» / «No la sé»
   con la fecha, la hora y el modo de estudio;
-- las palabras y listas eliminadas, mientras estén en la papelera.
+- los idiomas, listas y palabras eliminados, mientras estén en la papelera.
 
 Necesitamos estos datos para mostrarte tus palabras, programar los repasos y sincronizar tus dispositivos.
 
@@ -198,7 +198,7 @@ de la Comisión Europea o el Marco de Privacidad de Datos UE–EE. UU.
 ## Cuánto tiempo conservamos los datos
 
 - **Cuenta, palabras y progreso**: mientras exista tu cuenta.
-- **Papelera**: las palabras y listas eliminadas se guardan en la papelera durante 30 días y después se borran de la
+- **Papelera**: los idiomas, listas y palabras eliminados se guardan en la papelera durante 30 días y después se borran de la
   base de datos junto con su progreso y sus archivos. Las palabras que eliminas definitivamente de la papelera se
   borran en la siguiente limpieza diaria.
 - **Cuando eliminas tu cuenta**: tu cuenta, todos tus idiomas, listas, palabras, progreso y archivos del almacenamiento
