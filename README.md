@@ -74,3 +74,14 @@ yarn check    # lint, test, build, e2e
 
 Plan, progress and decisions (in Russian): [`docs/plan.md`](docs/plan.md), [`docs/progress.md`](docs/progress.md),
 [`docs/decisions.md`](docs/decisions.md).
+
+### Working with agents
+
+Start with [AGENTS.md](AGENTS.md). Shared rules and workflows live in [docs/agents/](docs/agents/);
+keep decisions and progress in the repository so another agent can continue the work.
+If your tool does not load AGENTS.md automatically, ask it: “Read AGENTS.md and follow the project instructions.”
+
+Requests such as “take the next task”, “remember this”, “update translations” and “update dependencies”
+use the shared workflows linked from AGENTS.md. Claude's instructions and local skills are adapters to those documents.
+The vendored Angular reference remains in `.claude/skills/angular-developer/` for its existing update mechanism;
+any agent can read it directly as instructed by the Angular rules.
